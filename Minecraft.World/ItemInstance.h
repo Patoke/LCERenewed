@@ -75,7 +75,7 @@ public:
 	Item *getItem() const;
 	Icon *getIcon();
 	int getIconType();
-		bool useOn(shared_ptr<Player> player, Level *level, int x, int y, int z, int face, float clickX = 0.0f, float clickY = 0.0f, float clickZ = 0.0f, bool bTestUseOnOnly = false);
+	bool useOn(shared_ptr<Player> player, Level *level, int x, int y, int z, int face, float clickX, float clickY, float clickZ, bool bTestUseOnOnly=false);
 	float getDestroySpeed(Tile *tile);
 	bool TestUse(shared_ptr<ItemInstance> itemInstance, Level *level, shared_ptr<Player> player); 
 	shared_ptr<ItemInstance> use(Level *level, shared_ptr<Player> player);
@@ -92,11 +92,10 @@ public:
 	void setAuxValue(int value);
 	int getMaxDamage();
 	bool hurt(int dmg, Random *random);
-		void hurtAndBreak(int dmg, shared_ptr<LivingEntity> owner);
-		void hurtEnemy(shared_ptr<LivingEntity> mob, shared_ptr<Player> attacker);
-		void mineBlock(Level *level, int tile, int x, int y, int z, shared_ptr<Player> owner);
-		void mineBlock(int tile, int x, int y, int z, shared_ptr<Player> owner);
-		bool canDestroySpecial(Tile *tile);
+	void hurtAndBreak(int dmg, shared_ptr<LivingEntity> owner);
+	void hurtEnemy(shared_ptr<LivingEntity> mob, shared_ptr<Player> attacker);
+	void mineBlock(Level *level, int tile, int x, int y, int z, shared_ptr<Player> owner);
+	bool canDestroySpecial(Tile *tile);
 	bool interactEnemy(shared_ptr<Player> player, shared_ptr<LivingEntity> mob);
 	shared_ptr<ItemInstance> copy() const;
 	ItemInstance *copy_not_shared() const; // 4J Stu - Added for use in recipes

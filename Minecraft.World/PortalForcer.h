@@ -1,9 +1,6 @@
 #pragma once
 
-#include "Pos.h"
-
 class Random;
-class ServerLevel;
 
 class PortalForcer
 {

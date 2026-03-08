@@ -3,7 +3,6 @@ using namespace std;
 
 #include "Entity.h"
 #include "JavaIntHash.h"
-#include "..\Minecraft.Client\Common\App_enums.h"
 
 class Level;
 class CompoundTag;

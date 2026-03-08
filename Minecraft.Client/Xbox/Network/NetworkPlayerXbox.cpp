@@ -5,7 +5,6 @@ NetworkPlayerXbox::NetworkPlayerXbox(IQNetPlayer *qnetPlayer)
 {
 	m_qnetPlayer = qnetPlayer;
 	m_pSocket = NULL;
-	m_lastChunkPacketTime = 0;
 }
 
 unsigned char NetworkPlayerXbox::GetSmallId()
@@ -18,18 +17,17 @@ void NetworkPlayerXbox::SendData(INetworkPlayer *player, const void *pvData, int
 	DWORD flags;
 	flags = QNET_SENDDATA_RELIABLE | QNET_SENDDATA_SEQUENTIAL;
 	if( lowPriority ) flags |= QNET_SENDDATA_LOW_PRIORITY | QNET_SENDDATA_SECONDARY;
-	(void)ack;
 	m_qnetPlayer->SendData(((NetworkPlayerXbox *)player)->m_qnetPlayer, pvData, dataSize, flags);
-}
-
-bool NetworkPlayerXbox::IsSameSystem(INetworkPlayer *player)
-{
-	return ( m_qnetPlayer->IsSameSystem(((NetworkPlayerXbox *)player)->m_qnetPlayer) == TRUE );
 }
 
 int NetworkPlayerXbox::GetOutstandingAckCount()
 {
 	return 0;
+}
+
+bool NetworkPlayerXbox::IsSameSystem(INetworkPlayer *player)
+{
+	return ( m_qnetPlayer->IsSameSystem(((NetworkPlayerXbox *)player)->m_qnetPlayer) == TRUE );
 }
 
 int NetworkPlayerXbox::GetSendQueueSizeBytes( INetworkPlayer *player, bool lowPriority )
@@ -133,11 +131,12 @@ void NetworkPlayerXbox::SentChunkPacket()
 
 int NetworkPlayerXbox::GetTimeSinceLastChunkPacket_ms()
 {
+	// If we haven't ever sent a packet, return maximum
 	if( m_lastChunkPacketTime == 0 )
 	{
 		return INT_MAX;
 	}
 
-	__int64 currentTime = System::currentTimeMillis();
+	int64_t currentTime = System::currentTimeMillis();
 	return (int)( currentTime - m_lastChunkPacketTime );
 }

@@ -15,5 +15,4 @@ public:
 	static const wstring VERSION_STRING;
 
 	static const bool DEADMAU5_CAMERA_CHEATS = false;
-	static const bool IS_DEMO_VERSION = false;
 };

@@ -351,10 +351,9 @@ public:
 	FoodData *getFoodData();
 	bool canEat(bool magicalItem);
 	bool isHurt();
-		virtual void startUsingItem(shared_ptr<ItemInstance> instance, int duration);
-		virtual bool mayDestroyBlockAt(int x, int y, int z);
-		virtual bool mayUseItemAt(int x, int y, int z, int face, shared_ptr<ItemInstance> item);
-		virtual bool mayBuild(int x, int y, int z) { return mayDestroyBlockAt(x, y, z); }
+	virtual void startUsingItem(shared_ptr<ItemInstance> instance, int duration);
+	virtual bool mayDestroyBlockAt(int x, int y, int z);
+	virtual bool mayUseItemAt(int x, int y, int z, int face, shared_ptr<ItemInstance> item);
 
 protected:
 	virtual int getExperienceReward(shared_ptr<Player> killedBy);

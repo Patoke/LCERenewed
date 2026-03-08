@@ -20,7 +20,6 @@
 #ifdef  _WINDOWS64
 
 #include <windows.h>
-#include "Xbox\Resource.h"
 #endif
 
 #define GAME_CREATE_ONLINE_TIMER_ID 0

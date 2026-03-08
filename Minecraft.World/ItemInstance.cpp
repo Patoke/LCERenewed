@@ -290,11 +290,6 @@ void ItemInstance::mineBlock(Level *level, int tile, int x, int y, int z, shared
 	Item::items[id]->mineBlock( shared_from_this(), level, tile, x, y, z, owner);
 }
 
-void ItemInstance::mineBlock(int tile, int x, int y, int z, shared_ptr<Player> owner)
-{
-	mineBlock(owner != NULL ? owner->level : NULL, tile, x, y, z, owner);
-}
-
 bool ItemInstance::canDestroySpecial(Tile *tile)
 {
 	return Item::items[id]->canDestroySpecial(tile);

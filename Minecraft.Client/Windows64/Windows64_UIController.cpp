@@ -165,6 +165,7 @@ GDrawTexture *ConsoleUIController::getSubstitutionTexture(int textureId)
 	tex->GetResource(&resource);
 	ID3D11Texture2D  *tex2d = (ID3D11Texture2D *)resource;
 	D3D11_TEXTURE2D_DESC desc;
+	ZeroMemory(&desc, sizeof(desc));
 	tex2d->GetDesc(&desc);
 	GDrawTexture *gdrawTex = gdraw_D3D11_WrappedTextureCreate(tex);
 	return gdrawTex;

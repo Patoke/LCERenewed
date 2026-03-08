@@ -10,12 +10,6 @@ class NetworkPlayerXbox : public INetworkPlayer
 public:
 	// Common player interface
 	NetworkPlayerXbox(IQNetPlayer *qnetPlayer);
-	NetworkPlayerXbox(IQNetPlayer *qnetPlayer, Socket *pSocket)
-	{
-		m_qnetPlayer = qnetPlayer;
-		m_pSocket = pSocket;
-		m_lastChunkPacketTime = 0;
-	}
 	virtual unsigned char GetSmallId();
 	virtual void SendData(INetworkPlayer *player, const void *pvData, int dataSize, bool lowPriority, bool ack);
 	virtual bool IsSameSystem(INetworkPlayer *player);
@@ -45,5 +39,5 @@ public:
 private:
 	IQNetPlayer *m_qnetPlayer;
 	Socket *m_pSocket;
-	__int64 m_lastChunkPacketTime;
+	int64_t m_lastChunkPacketTime;
 };

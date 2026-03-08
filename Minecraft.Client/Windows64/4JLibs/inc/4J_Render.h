@@ -85,9 +85,6 @@ public:
 	typedef enum
 	{
 		PIXEL_SHADER_TYPE_STANDARD,
-		PIXEL_SHADER_TYPE_STANDARD2,
-		PIXEL_SHADER_TYPE_STANDARD3,
-		PIXEL_SHADER_TYPE_STANDARD4,
 		PIXEL_SHADER_TYPE_PROJECTION,
 		PIXEL_SHADER_TYPE_FORCELOD,
 		PIXEL_SHADER_COUNT
@@ -147,8 +144,8 @@ public:
 	// Textures
 	int TextureCreate();
 	void TextureFree(int idx);
+	void TextureBind(int layer, int idx) { TextureBind(idx); }; // TODO(3UR): layering in 4j
 	void TextureBind(int idx);
-	void TextureBind(int layer, int idx);
 	void TextureBindVertex(int idx);
 	void TextureSetTextureLevels(int levels);
 	int  TextureGetTextureLevels();
@@ -302,3 +299,5 @@ const int GL_TRIANGLE_STRIP = C4JRender::PRIMITIVE_TYPE_TRIANGLE_STRIP;
 
 // Singleton
 extern C4JRender RenderManager;
+
+

@@ -4,7 +4,6 @@ using namespace std;
 #include "LevelSource.h"
 #include "Mob.h"
 #include "WeighedRandom.h"
-#include "..\Minecraft.Client\Common\App_enums.h"
 
 class Feature;
 class MobCategory;

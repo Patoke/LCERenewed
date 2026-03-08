@@ -628,8 +628,7 @@ public:
 	virtual void onRemove(Level *level, int x, int y, int z, int id, int data);
 	virtual int getResourceCount(Random *random);
 	virtual int getResource(int data, Random *random, int playerBonusLevel);
-		virtual float getDestroyProgress(shared_ptr<Player> player, Level *level, int x, int y, int z);
-		virtual float getDestroyProgress(shared_ptr<Player> player);
+	virtual float getDestroyProgress(shared_ptr<Player> player, Level *level, int x, int y, int z);
 	virtual void spawnResources(Level *level, int x, int y, int z, int data, int playerBonusLevel);
 	virtual void spawnResources(Level *level, int x, int y, int z, int data, float odds, int playerBonusLevel);
 protected:
@@ -652,7 +651,7 @@ public:
 	virtual bool mayPlace(Level *level, int x, int y, int z);
 	virtual bool TestUse();
 	virtual bool TestUse(Level *level, int x, int y, int z, shared_ptr<Player> player);
-		virtual bool use(Level *level, int x, int y, int z, shared_ptr<Player> player, int clickedFace = -1, float clickX = 0.0f, float clickY = 0.0f, float clickZ = 0.0f, bool soundOnly = false);
+	virtual bool use(Level *level, int x, int y, int z, shared_ptr<Player> player, int clickedFace, float clickX, float clickY, float clickZ, bool soundOnly = false); // 4J added soundOnly param
 	virtual void stepOn(Level *level, int x, int y, int z, shared_ptr<Entity> entity);
 	virtual int getPlacedOnFaceDataValue(Level *level, int x, int y, int z, int face, float clickX, float clickY, float clickZ, int itemValue);
 	virtual void prepareRender(Level *level, int x, int y, int z);

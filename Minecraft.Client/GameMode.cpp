@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "GameMode.h"
 #include "LocalPlayer.h"
-#include "MultiPlayerLevel.h"
 #include "LevelRenderer.h"
 #include "..\Minecraft.World\net.minecraft.world.level.h"
 #include "..\Minecraft.World\net.minecraft.world.level.tile.h"
@@ -49,7 +48,6 @@ void GameMode::render(float a)
 
 bool GameMode::useItem(shared_ptr<Player> player, Level *level, shared_ptr<ItemInstance> item, bool bTestUseOnly)
 {
-	return false;
 }
 
 void GameMode::initPlayer(shared_ptr<Player> player)

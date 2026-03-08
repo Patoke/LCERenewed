@@ -902,15 +902,6 @@ float Tile::getDestroyProgress(shared_ptr<Player> player, Level *level, int x, i
 	return (player->getDestroySpeed(this, true) / destroySpeed) / 30;
 }
 
-float Tile::getDestroyProgress(shared_ptr<Player> player)
-{
-	if (player == NULL || player->level == NULL)
-	{
-		return 0.0f;
-	}
-	return getDestroyProgress(player, player->level, Mth::floor(player->x), Mth::floor(player->y), Mth::floor(player->z));
-}
-
 void Tile::spawnResources(Level *level, int x, int y, int z, int data, int playerBonusLevel)
 {
 	spawnResources(level, x, y, z, data, 1, playerBonusLevel);

@@ -3,8 +3,6 @@
 #include "DemoMode.h"
 #include "LevelRenderer.h"
 #include "LocalPlayer.h"
-#include "MultiPlayerLevel.h"
-#include "MultiPlayerLocalPlayer.h"
 #include "..\Minecraft.World\net.minecraft.world.level.h"
 #include "..\Minecraft.World\net.minecraft.world.level.tile.h"
 #include "..\Minecraft.World\net.minecraft.world.entity.player.h"

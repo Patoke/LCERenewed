@@ -210,11 +210,10 @@ public:
 	bool reallyHasChunk(int x, int z );	// 4J added
 
 public:
-		LevelChunk *getChunkAt(int x, int z);
-		LevelChunk *getChunk(int x, int z);
-		virtual bool setTile(int x, int y, int z, int tile) { return setTileAndUpdate(x, y, z, tile); }
-		virtual bool setTileAndData(int x, int y, int z, int tile, int data, int updateFlags);
-		Material *getMaterial(int x, int y, int z);
+	LevelChunk *getChunkAt(int x, int z);
+	LevelChunk *getChunk(int x, int z);
+	virtual bool setTileAndData(int x, int y, int z, int tile, int data, int updateFlags);
+	Material *getMaterial(int x, int y, int z);
 	virtual int getData(int x, int y, int z);
 	virtual bool setData(int x, int y, int z, int data, int updateFlags, bool forceUpdate =false);	// 4J added forceUpdate
 	virtual bool removeTile(int x, int y, int z);

@@ -263,7 +263,6 @@
     <None Include="net.minecraft.core.h">
       <Filter>net\minecraft\core</Filter>
     </None>
-    <None Include="EntityDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -2727,9 +2726,6 @@
       <Filter>net\minecraft\stats</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleSaveFileOriginal.h">
-      <Filter>ConsoleHelpers\ConsoleSaveFileIO</Filter>
-    </ClInclude>
-    <ClInclude Include="ConsoleSaveFileSplit.h">
       <Filter>ConsoleHelpers\ConsoleSaveFileIO</Filter>
     </ClInclude>
     <ClInclude Include="ConsoleSaveFileConverter.h">
@@ -5264,9 +5260,6 @@
       <Filter>net\minecraft\stats</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleSaveFileOriginal.cpp">
-      <Filter>ConsoleHelpers\ConsoleSaveFileIO</Filter>
-    </ClCompile>
-    <ClCompile Include="ConsoleSaveFileSplit.cpp">
       <Filter>ConsoleHelpers\ConsoleSaveFileIO</Filter>
     </ClCompile>
     <ClCompile Include="ConsoleSaveFileConverter.cpp">

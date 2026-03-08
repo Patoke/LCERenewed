@@ -9,14 +9,11 @@ UITTFFont::UITTFFont(const string &name, const string &path, S32 fallbackCharact
 {
 	app.DebugPrintf("UITTFFont opening %s\n",path.c_str());
 
-	File fontFile(convStringToWstring(path));
-
 #ifdef _UNICODE
-	wstring wPath = fontFile.getPath();
+	wstring wPath = convStringToWstring(path);
 	HANDLE file = CreateFile(wPath.c_str(), GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 #else
-	string resolvedPath = wstringtochararray(fontFile.getPath());
-	HANDLE file = CreateFile(resolvedPath.c_str(), GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+	HANDLE file = CreateFile(path.c_str(), GENERIC_READ, 0, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
 #endif
 	if( file == INVALID_HANDLE_VALUE )
 	{

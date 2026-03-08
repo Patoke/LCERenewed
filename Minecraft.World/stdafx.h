@@ -111,20 +111,10 @@ typedef XUID GameSessionUID;
 #include <sstream>
 #include <iostream>
 #include <exception>
-#include <functional>
 
 #ifndef __PS3__			// the PS3 lib assert is rubbish, and aborts the code, we define our own in PS3Types.h
 #include <assert.h>
 #endif
-
-namespace std
-{
-	template <typename T>
-	inline size_t hash_value(const T& value)
-	{
-		return hash<T>()(value);
-	}
-}
 
 #ifndef _XBOX
 #include "extraX64.h"

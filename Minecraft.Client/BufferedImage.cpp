@@ -25,120 +25,6 @@ typedef struct
 } BITMAPINFOHEADER;
 #endif
 
-#ifdef _WINDOWS64
-static void NormalizePathSlashes(string& value)
-{
-	for(size_t i = 0; i < value.size(); ++i)
-	{
-		if(value[i] == '\\')
-		{
-			value[i] = '/';
-		}
-	}
-}
-
-static bool FileExistsA(const string& path)
-{
-	return GetFileAttributesA(path.c_str()) != INVALID_FILE_ATTRIBUTES;
-}
-
-static void AddUniqueTexturePath(vector<string>& output, const string& path)
-{
-	if(path.empty())
-	{
-		return;
-	}
-	for(size_t i = 0; i < output.size(); ++i)
-	{
-		if(output[i] == path)
-		{
-			return;
-		}
-	}
-	output.push_back(path);
-}
-
-static void AddSourceTextureCandidates(vector<string>& output, const string& path)
-{
-	AddUniqueTexturePath(output, "sources/textures/" + path);
-	AddUniqueTexturePath(output, "../sources/textures/" + path);
-	AddUniqueTexturePath(output, "../../sources/textures/" + path);
-	AddUniqueTexturePath(output, "../../../sources/textures/" + path);
-}
-
-static bool ResolveWindows64TexturePath(const wstring& inputPath, wstring& resolvedPath)
-{
-	string originalPath;
-	originalPath.reserve(inputPath.size());
-	for(size_t i = 0; i < inputPath.size(); ++i)
-	{
-		originalPath.push_back((char)inputPath[i]);
-	}
-	NormalizePathSlashes(originalPath);
-	if(originalPath.empty())
-	{
-		return false;
-	}
-
-	if(FileExistsA(originalPath))
-	{
-		resolvedPath = convStringToWstring(originalPath);
-		return true;
-	}
-
-	string relativePath = originalPath;
-	while(!relativePath.empty() && (relativePath[0] == '/' || relativePath[0] == '\\'))
-	{
-		relativePath.erase(relativePath.begin());
-	}
-	if(relativePath.empty())
-	{
-		return false;
-	}
-
-	vector<string> candidates;
-	AddSourceTextureCandidates(candidates, relativePath);
-
-	char cwd[MAX_PATH];
-	cwd[0] = 0;
-	if(GetCurrentDirectoryA(sizeof(cwd), cwd) > 0)
-	{
-		string cwdPath = cwd;
-		NormalizePathSlashes(cwdPath);
-		if(!cwdPath.empty() && cwdPath[cwdPath.size() - 1] != '/')
-		{
-			cwdPath += "/";
-		}
-		AddSourceTextureCandidates(candidates, cwdPath + relativePath);
-	}
-
-	char modulePath[MAX_PATH];
-	modulePath[0] = 0;
-	if(GetModuleFileNameA(NULL, modulePath, sizeof(modulePath)) > 0)
-	{
-		string moduleDir = modulePath;
-		NormalizePathSlashes(moduleDir);
-		size_t slashPos = moduleDir.find_last_of('/');
-		if(slashPos != string::npos)
-		{
-			moduleDir = moduleDir.substr(0, slashPos + 1);
-			AddSourceTextureCandidates(candidates, moduleDir + relativePath);
-		}
-	}
-
-	for(size_t i = 0; i < candidates.size(); ++i)
-	{
-		if(FileExistsA(candidates[i]))
-		{
-			resolvedPath = convStringToWstring(candidates[i]);
-			return true;
-		}
-	}
-
-	return false;
-}
-#endif
-
 BufferedImage::BufferedImage(int width,int height,int type)
 {
 	data[0] = new int[width*height];
@@ -273,14 +159,6 @@ BufferedImage::BufferedImage(const wstring& File, bool filenameHasExtension /*=f
 		{
 			name = wDrive + L"res" + filePath.substr(0,filePath.length()-4) + mipMapPath + L".png";
 		}
-
-#ifdef _WINDOWS64
-		wstring resolvedPath;
-		if(ResolveWindows64TexturePath(name, resolvedPath))
-		{
-			name = resolvedPath;
-		}
-#endif
 
 		const char *pchTextureName=wstringtofilename(name);
 

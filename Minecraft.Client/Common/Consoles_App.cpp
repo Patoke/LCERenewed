@@ -4358,32 +4358,6 @@ void CMinecraftApp::loadStringTable()
 		delete m_stringTable;
 	}
 	wstring localisationFile = L"languages.loc";
-#ifdef _WINDOWS64
-	wstring windows64RootLocalisationFile = L"..\\..\\Minecraft.Client\\Windows64Media\\Media\\languages.loc";
-	File windows64RootLocFile(windows64RootLocalisationFile);
-	if (windows64RootLocFile.exists())
-	{
-		FileInputStream fis(windows64RootLocFile);
-		byteArray locFile(windows64RootLocFile.length());
-		fis.read(locFile,0,windows64RootLocFile.length());
-		fis.close();
-		m_stringTable = new StringTable(locFile.data, locFile.length);
-		delete locFile.data;
-		return;
-	}
-	wstring windows64LocalisationFile = L"Windows64Media\\Media\\languages.loc";
-	File windows64LocFile(windows64LocalisationFile);
-	if (windows64LocFile.exists())
-	{
-		FileInputStream fis(windows64LocFile);
-		byteArray locFile(windows64LocFile.length());
-		fis.read(locFile,0,windows64LocFile.length());
-		fis.close();
-		m_stringTable = new StringTable(locFile.data, locFile.length);
-		delete locFile.data;
-		return;
-	}
-#endif
 	if (m_mediaArchive->hasFile(localisationFile))
 	{
 		byteArray locFile = m_mediaArchive->getFile(localisationFile);
