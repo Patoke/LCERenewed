@@ -29,6 +29,9 @@ public:
 
 	// original code
 	virtual void TemporaryCreateGameStart();
+
+private:
+	ImageFileBuffer m_ThumbnailBuffer;
 };
 
 extern CConsoleMinecraftApp app;

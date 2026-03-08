@@ -174,24 +174,6 @@
     <Filter Include="Common\Source Files\Audio">
       <UniqueIdentifier>{94298ae6-25e0-4cc9-8c5a-efd53e156baa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Windows64\Miles Sound System">
-      <UniqueIdentifier>{4c9eb137-a48c-44a4-be08-ef1745834ece}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Windows64\Miles Sound System\Include">
-      <UniqueIdentifier>{2bae7445-385f-4b0e-a3ec-11c1c584f930}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Windows64\Miles Sound System\lib">
-      <UniqueIdentifier>{7c655cf2-f74e-4e6a-9114-405f5bc28a56}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Windows64\Miles Sound System\dll">
-      <UniqueIdentifier>{a36a05f3-bc99-4097-b7a8-f81c37eec6e3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Windows64\Miles Sound System\dll\Debug">
-      <UniqueIdentifier>{c9fd57aa-ede6-46f3-b968-0f4a7c64f7f1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Windows64\Miles Sound System\dll\Release">
-      <UniqueIdentifier>{bcd2eaff-60b9-41f4-8e1a-258639b27f99}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Common\Source Files\Localisation">
       <UniqueIdentifier>{d7537fdd-877b-461c-9c86-3235843fcfc0}</UniqueIdentifier>
     </Filter>
@@ -288,6 +270,21 @@
     <Filter Include="Xbox\Network">
       <UniqueIdentifier>{bfa1c6bb-3648-4719-b928-e1ebd8929316}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Windows64\Miles Sound System">
+      <UniqueIdentifier>{d3871a40-33c9-41f3-8a90-1106d6f4f050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows64\Miles Sound System\dll">
+      <UniqueIdentifier>{78099601-d9a6-4e83-b8d6-4a6a9754ef10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows64\Miles Sound System\include">
+      <UniqueIdentifier>{f935eedf-ed0d-4777-9dc8-acf20bf2d6d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows64\Miles Sound System\lib">
+      <UniqueIdentifier>{37858852-bad1-4575-9a92-aa811bbcf7a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows64\Iggy\dll">
+      <UniqueIdentifier>{e2347bb6-fec6-4a9d-949e-db149c20c800}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Windows64\GameConfig\Minecraft.gameconfig">
@@ -313,6 +310,15 @@
     </None>
     <None Include="Network Implementation Notes.txt">
       <Filter>Common\Source Files\Network</Filter>
+    </None>
+    <None Include="Common\Audio\MilesSDK\redist64\mss64.dll">
+      <Filter>Windows64\Miles Sound System\dll</Filter>
+    </None>
+    <None Include="Common\Audio\MilesSDK\pdb\mss64.pdb">
+      <Filter>Windows64\Miles Sound System\dll</Filter>
+    </None>
+    <None Include="Windows64\Iggy\lib\redist64\iggy_w64.dll">
+      <Filter>Windows64\Iggy\dll</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -1318,12 +1324,6 @@
     <ClInclude Include="VillagerGolemRenderer.h">
       <Filter>net\minecraft\client\renderer\entity</Filter>
     </ClInclude>
-    <ClInclude Include="Windows64\Miles\include\mss.h">
-      <Filter>Windows64\Miles Sound System\Include</Filter>
-    </ClInclude>
-    <ClInclude Include="Windows64\Miles\include\rrcore.h">
-      <Filter>Windows64\Miles Sound System\Include</Filter>
-    </ClInclude>
     <ClInclude Include="Common\Audio\Consoles_SoundEngine.h">
       <Filter>Common\Source Files\Audio</Filter>
     </ClInclude>
@@ -2010,6 +2010,12 @@
     </ClInclude>
     <ClInclude Include="Xbox\Network\NetworkPlayerXbox.h">
       <Filter>Xbox\Network</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows64\Miles\include\rrcore.h">
+      <Filter>Windows64\Miles Sound System\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Windows64\Miles\include\mss.h">
+      <Filter>Windows64\Miles Sound System\include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -3560,9 +3566,6 @@
     <Library Include="Windows64\4JLibs\libs\4J_Input_d.lib">
       <Filter>Windows64\4JLibs\libs</Filter>
     </Library>
-    <Library Include="Windows64\Miles\lib\mss64.lib">
-      <Filter>Windows64\Miles Sound System\lib</Filter>
-    </Library>
     <Library Include="Windows64\Iggy\lib\iggy_w64.lib">
       <Filter>Windows64\Iggy\lib</Filter>
     </Library>
@@ -3578,6 +3581,7 @@
     <Library Include="Windows64\4JLibs\libs\4J_Storage_d.lib">
       <Filter>Windows64\4JLibs\libs</Filter>
     </Library>
+    <Library Include="Common\Audio\MilesSDK\lib\mss64.lib" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Xbox\MinecraftWindows.ico">

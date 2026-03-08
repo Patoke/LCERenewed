@@ -14,7 +14,9 @@
 // 4J Stu - Temp define to get Miles to link, can likely be removed when we get a new version of Miles
 #define _SEKRIT
 #include "..\..\Durango\Miles\include\mss.h"
-#elif defined __ORBIS__
+#elif defined _WINDOWS64
+#include "..\..\Common\Audio\MilesSDK\include\mss.h"
+#else // PS4
 // 4J Stu - Temp define to get Miles to link, can likely be removed when we get a new version of Miles
 #define _SEKRIT2
 #include "..\..\Orbis\Miles\include\mss.h"

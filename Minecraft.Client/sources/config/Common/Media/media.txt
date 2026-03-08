@@ -1,5 +1,0 @@
-splashes.txt
-HTMLColours.col
-Graphics\SaveChest.png
-Graphics\MinecraftIcon.png
-Graphics\TexturePackIcon.png

@@ -169,6 +169,7 @@ BufferedImage::BufferedImage(const wstring& File, bool filenameHasExtension /*=f
 		D3DXIMAGE_INFO ImageInfo;
 		ZeroMemory(&ImageInfo,sizeof(D3DXIMAGE_INFO));
 		hr=RenderManager.LoadTextureData(pchTextureName,&ImageInfo,&data[l]);
+		app.DebugPrintf("Loaded: %s - %dx%d\n", pchTextureName, width, height);
 
 
 		if(hr!=ERROR_SUCCESS) 

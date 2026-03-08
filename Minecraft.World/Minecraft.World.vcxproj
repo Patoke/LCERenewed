@@ -1,57 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="ContentPackage_NO_TU|Win32">
-      <Configuration>ContentPackage_NO_TU</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="ContentPackage_NO_TU|x64">
-      <Configuration>ContentPackage_NO_TU</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="CONTENTPACKAGE_SYMBOLS|Win32">
-      <Configuration>CONTENTPACKAGE_SYMBOLS</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="CONTENTPACKAGE_SYMBOLS|x64">
-      <Configuration>CONTENTPACKAGE_SYMBOLS</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="ContentPackage_Vita|Win32">
-      <Configuration>ContentPackage_Vita</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="ContentPackage_Vita|x64">
-      <Configuration>ContentPackage_Vita</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="ContentPackage|Win32">
-      <Configuration>ContentPackage</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="ContentPackage|x64">
-      <Configuration>ContentPackage</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="ReleaseForArt|Win32">
-      <Configuration>ReleaseForArt</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="ReleaseForArt|x64">
       <Configuration>ReleaseForArt</Configuration>
       <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|x64">
       <Configuration>Release</Configuration>
@@ -74,67 +30,12 @@
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v110</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v110</PlatformToolset>
@@ -150,43 +51,10 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'" Label="PropertySheets">
@@ -199,57 +67,9 @@
     <OutDir>$(ProjectDir)\$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
-    <IncludePath>$(ProjectDir)\x64headers;$(IncludePath)</IncludePath>
-    <OutDir>$(ProjectDir)\$(Platform)_$(Configuration)\</OutDir>
-    <IntDir>$(Platform)_$(Configuration)\</IntDir>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
     <IncludePath>$(ProjectDir)\x64headers;$(IncludePath)</IncludePath>
-    <OutDir>$(ProjectDir)\$(Platform)_$(Configuration)\</OutDir>
-    <IntDir>$(Platform)_$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
-    <IncludePath>$(ProjectDir)\x64headers;$(IncludePath)</IncludePath>
-    <OutDir>$(ProjectDir)\$(Platform)_$(Configuration)\</OutDir>
-    <IntDir>$(Platform)_$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">
-    <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
-    <IncludePath>$(ProjectDir)\x64headers;$(IncludePath)</IncludePath>
-    <OutDir>$(ProjectDir)\$(Platform)_$(Configuration)\</OutDir>
-    <IntDir>$(Platform)_$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">
-    <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
-    <IncludePath>$(ProjectDir)\x64headers;$(IncludePath)</IncludePath>
-    <OutDir>$(ProjectDir)\$(Platform)_$(Configuration)\</OutDir>
-    <IntDir>$(Platform)_$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'">
-    <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
-    <IncludePath>$(ProjectDir)\x64header;$(DXSDK_DIR)include;$(IncludePath)</IncludePath>
-    <OutDir>$(ProjectDir)\$(Platform)_$(Configuration)\</OutDir>
-    <IntDir>$(Platform)_$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'">
-    <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
-    <IncludePath>$(ProjectDir)\x64header;$(DXSDK_DIR)include;$(IncludePath)</IncludePath>
-    <OutDir>$(ProjectDir)\$(Platform)_$(Configuration)\</OutDir>
-    <IntDir>$(Platform)_$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'">
-    <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
-    <IncludePath>$(ProjectDir)\x64header;$(DXSDK_DIR)include;$(IncludePath)</IncludePath>
-    <OutDir>$(ProjectDir)\$(Platform)_$(Configuration)\</OutDir>
-    <IntDir>$(Platform)_$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'">
-    <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
-    <IncludePath>$(ProjectDir)\x64header;$(DXSDK_DIR)include;$(IncludePath)</IncludePath>
     <OutDir>$(ProjectDir)\$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
   </PropertyGroup>
@@ -258,22 +78,6 @@
     <IncludePath>$(ProjectDir)\x64header;$(DXSDK_DIR)include;$(IncludePath)</IncludePath>
     <OutDir>$(ProjectDir)\$(Platform)_$(Configuration)\</OutDir>
     <IntDir>$(Platform)_$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'">
-    <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
-    <IncludePath>$(ProjectDir)\x64header;$(DXSDK_DIR)include;$(IncludePath)</IncludePath>
-    <OutDir>$(ProjectDir)\$(Platform)_$(Configuration)\</OutDir>
-    <IntDir>$(Platform)_$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'">
-    <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
-    <IncludePath>$(ProjectDir)\x64header;$(DXSDK_DIR)include;$(IncludePath)</IncludePath>
-    <OutDir>$(ProjectDir)\$(Configuration)\</OutDir>
-    <IntDir>$(ProjectDir)\$(Configuration)\</IntDir>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'">
-    <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
-    <IncludePath>$(ProjectDir)\x64header;$(DXSDK_DIR)include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">
     <OutputFile>$(OutDir)$(ProjectName).lib</OutputFile>
@@ -295,28 +99,6 @@
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <PreprocessorDefinitions>_LARGE_WORLDS;_DEBUG_MENUS_ENABLED;_DEBUG;_LIB;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;_WINDOWS64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <CallAttributedProfiling>Disabled</CallAttributedProfiling>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <ShowIncludes>false</ShowIncludes>
-      <UseFullPaths>false</UseFullPaths>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <Optimization>Disabled</Optimization>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PreprocessorDefinitions>_LARGE_WORLDS;_DEBUG_MENUS_ENABLED;_DEBUG;_LIB;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;_WINDOWS64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CallAttributedProfiling>Disabled</CallAttributedProfiling>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
@@ -352,237 +134,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <Optimization>Full</Optimization>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PreprocessorDefinitions>_LARGE_WORLDS;_DEBUG_MENUS_ENABLED;_LIB;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;_WINDOWS64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <CallAttributedProfiling>Disabled</CallAttributedProfiling>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <ShowIncludes>false</ShowIncludes>
-      <UseFullPaths>false</UseFullPaths>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <Optimization>Full</Optimization>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PreprocessorDefinitions>_LARGE_WORLDS;_DEBUG_MENUS_ENABLED;_LIB;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;_WINDOWS64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <CallAttributedProfiling>Disabled</CallAttributedProfiling>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <ShowIncludes>false</ShowIncludes>
-      <UseFullPaths>false</UseFullPaths>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <Optimization>Full</Optimization>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PreprocessorDefinitions>_LARGE_WORLDS;_DEBUG_MENUS_ENABLED;_LIB;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;_WINDOWS64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <CallAttributedProfiling>Disabled</CallAttributedProfiling>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <ShowIncludes>false</ShowIncludes>
-      <UseFullPaths>false</UseFullPaths>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <Optimization>Full</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <StringPooling>true</StringPooling>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PreprocessorDefinitions>_TU_BUILD;_FINAL_BUILD;NDEBUG;_XBOX;_LIB;_CONTENT_PACKAGE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <Optimization>Full</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <StringPooling>true</StringPooling>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PreprocessorDefinitions>_TU_BUILD;_FINAL_BUILD;NDEBUG;_XBOX;_LIB;_CONTENT_PACKAGE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <Optimization>Full</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <StringPooling>true</StringPooling>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PreprocessorDefinitions>_TU_BUILD;_FINAL_BUILD;NDEBUG;_XBOX;_LIB;_CONTENT_PACKAGE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <Optimization>Full</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <StringPooling>true</StringPooling>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PreprocessorDefinitions>_TU_BUILD;_FINAL_BUILD;NDEBUG;_XBOX;_LIB;_CONTENT_PACKAGE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <Optimization>Full</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <StringPooling>true</StringPooling>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PreprocessorDefinitions>_TU_BUILD;_FINAL_BUILD;NDEBUG;_XBOX;_LIB;_CONTENT_PACKAGE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <Optimization>Full</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <StringPooling>true</StringPooling>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PreprocessorDefinitions>_TU_BUILD;_FINAL_BUILD;NDEBUG;_XBOX;_LIB;_CONTENT_PACKAGE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <Optimization>Full</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <StringPooling>true</StringPooling>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PreprocessorDefinitions>_TU_BUILD;_FINAL_BUILD;NDEBUG;_XBOX;_LIB;_CONTENT_PACKAGE;_CRT_NON_CONFORMING_SWPRINTFS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -832,7 +384,6 @@
     <ClInclude Include="DragonFireball.h" />
     <ClInclude Include="DurangoStats.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="EatTileGoal.h" />
     <ClInclude Include="EffectCommand.h" />
@@ -1467,20 +1018,9 @@
     <ClInclude Include="RandomLevelSource.h" />
     <ClInclude Include="Reader.h" />
     <ClInclude Include="ReadOnlyChunkCache.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Recipes.h" />
     <ClInclude Include="Recipy.h" />
@@ -1782,11 +1322,7 @@
     <ClCompile Include="ChunkPos.cpp" />
     <ClCompile Include="ChunkStorageProfileDecorator.cpp">
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">false</ShowIncludes>
     </ClCompile>
     <ClCompile Include="ChunkTilesUpdatePacket.cpp" />
     <ClCompile Include="ChunkVisibilityAreaPacket.cpp" />
@@ -1859,20 +1395,9 @@
     <ClCompile Include="DefaultGameModeCommand.cpp" />
     <ClCompile Include="DispenseItemBehavior.cpp" />
     <ClCompile Include="DurangoStats.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="EffectCommand.cpp" />
     <ClCompile Include="EnchantItemCommand.cpp" />
@@ -2223,11 +1748,7 @@
     <ClCompile Include="Level.cpp" />
     <ClCompile Include="LevelChunk.cpp">
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">false</ShowIncludes>
     </ClCompile>
     <ClCompile Include="LevelEventPacket.cpp" />
     <ClCompile Include="LevelSettings.cpp" />
@@ -2254,55 +1775,22 @@
     <ClCompile Include="McRegionLevelStorage.cpp" />
     <ClCompile Include="MelonTile.cpp" />
     <ClCompile Include="MemoryChunkStorage.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="MemoryLevelStorage.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="MemoryLevelStorageSource.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="MenuBackup.cpp" />
     <ClCompile Include="MetalTile.cpp" />
@@ -2331,21 +1819,10 @@
     <ClCompile Include="MusicTileEntity.cpp" />
     <ClCompile Include="NbtIo.cpp" />
     <ClCompile Include="NbtSlotFile.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="NotGateTile.cpp" />
@@ -2390,20 +1867,9 @@
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="RandomLevelSource.cpp" />
     <ClCompile Include="ReadOnlyChunkCache.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Recipes.cpp" />
     <ClCompile Include="RecordingItem.cpp" />
@@ -2456,11 +1922,7 @@
     <ClCompile Include="SignTile.cpp" />
     <ClCompile Include="SignTileEntity.cpp">
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">false</ShowIncludes>
     </ClCompile>
     <ClCompile Include="SignUpdatePacket.cpp" />
     <ClCompile Include="Silverfish.cpp" />
@@ -2469,19 +1931,8 @@
     <ClCompile Include="Skeleton.cpp" />
     <ClCompile Include="SkyIslandDimension.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Slime.cpp" />
@@ -2504,26 +1955,11 @@
     <ClCompile Include="StairTile.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">Create</PrecompiledHeader>
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ShowIncludes>
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">false</ShowIncludes>
-      <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">false</ShowIncludes>
     </ClCompile>
     <ClCompile Include="StemTile.cpp" />
     <ClCompile Include="StoneMonsterTile.cpp" />
@@ -2598,55 +2034,22 @@
     <ClCompile Include="Zombie.cpp" />
     <ClCompile Include="WaterAnimal.cpp" />
     <ClCompile Include="ZonedChunkStorage.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ZoneFile.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ZoneIo.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='CONTENTPACKAGE_SYMBOLS|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_NO_TU|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ContentPackage_Vita|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ZoomLayer.cpp" />
   </ItemGroup>

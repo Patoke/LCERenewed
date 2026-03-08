@@ -4,12 +4,6 @@ class Options;
 using namespace std;
 #include "..\..\Minecraft.World\SoundTypes.h"
 
-#ifdef _WINDOWS64
-typedef void *HMSOUNDBANK;
-typedef void *HDIGDRIVER;
-typedef void *HSTREAM;
-#endif
-
 enum eMUSICFILES
 {
 	eStream_Overworld_Calm1 = 0,
@@ -82,7 +76,7 @@ enum MUSIC_STREAMSTATE
 
 typedef struct
 {
-	float x,y,z,volume,pitch;
+	F32 x,y,z,volume,pitch;
 	int iSound;
 	bool bIs3D;	
 	bool bUseSoundsPitchVal;	
