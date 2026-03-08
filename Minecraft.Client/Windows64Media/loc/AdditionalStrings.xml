@@ -43,14 +43,6 @@
 		<value>Online Service</value>
 	</data>	
 
-	<data name="IDS_ERROR_PSN_SIGN_OUT">
-		<value>You have been signed out from the "PSN". Online features of the game will not be available until you sign back into the "PSN".</value>
-	</data>	
-
-	<data name="IDS_ERROR_PSN_SIGN_OUT_EXIT">
-		<value>You have been signed out from the "PSN". Online features of the game will not be available until you sign back into the "PSN". Exiting to Main Menu.</value>
-	</data>	
-
 	<data name="IDS_PLAYER_LIST_TITLE">
 		<value>Choose user for player %d (or cancel to play as guest)</value>
 	</data>	

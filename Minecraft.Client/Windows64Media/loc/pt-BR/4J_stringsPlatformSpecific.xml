@@ -1,52 +1,103 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<root>
-	<data name="IDS_PRO_NOPROFILEOPTIONS_TEXT">
-		<value>Falha ao salvar configurações na conta da Sony Entertainment Network.</value>
-	</data>
-	<data name="IDS_PRO_NOPROFILE_TITLE">
-		<value>Problema na conta da Sony Entertainment Network</value>
-	</data>
-	<data name="IDS_PRO_ACHIEVEMENTPROBLEM_TEXT">
-		<value>Houve um problema ao acessar sua conta da Sony Entertainment Network. Não foi possível conceder seu troféu no momento.</value>
-	</data>
-	<data name="IDS_PRO_UNLOCKGAME_TEXT">
-		<value>Esta é a versão de avaliação do jogo Minecraft: PlayStation®3 Edition. Se você já tem a versão completa do jogo, acabou de ganhar um troféu! 
-Desbloqueie a versão completa do jogo para curtir a diversão de Minecraft: PlayStation®3 Edition e jogue com seus amigos ao redor do mundo na "PSN".
-Deseja desbloquear a versão completa do jogo?</value>
-	</data>
-	<data name="IDS_PRO_NOTADHOCONLINE_ACCEPT">
-		<value>Conexão à Rede Ad Hoc</value>
-	</data>
-	<data name="IDS_PRO_NOTADHOCONLINE_TEXT">
-		<value>Este jogo tem recursos que exigem uma conexão de rede Ad Hoc, mas você está offline no momento.</value>
-	</data>
-	<data name="IDS_PRO_NOTADHOCONLINE_TITLE">
-		<value>Rede Ad Hoc offline.</value>
-	</data>
-	<data name="IDS_PRO_ACHIEVEMENTPROBLEM_TITLE">
-		<value>Problema com troféu</value>
-	</data>
-	<data name="IDS_PRO_RETURNEDTOMENU_TEXT">
-		<value>A partida terminou porque sua sessão da "PSN" foi finalizada
-</value>
-	</data>
-	<data name="IDS_PRO_RETURNEDTOTITLESCREEN_TEXT">
-		<value>Você retornou à tela de título porque sua sessão da "PSN" foi finalizada</value>
-	</data>
+﻿<root>
 	<data name="IDS_NOFREESPACE_TEXT">
-		<value>O armazenamento do sistema selecionado não tem espaço livre suficiente para salvar um jogo.</value>
-	</data>
+		<value>O dispositivo de armazenamento selecionado não tem espaço livre suficiente para salvar um jogo.</value>
+	</data>	
+
+	<data name="IDS_OVERWRITESAVE_TEXT">
+		<value>Seu dispositivo de armazenamento selecionado já contém este salvamento. Deseja substituí-lo?</value>
+	</data>	
+
+	<data name="IDS_STORAGEDEVICEPROBLEM_TITLE">
+		<value>Erro dispositivo armazenamento</value>
+	</data>	
+
+	<data name="IDS_FAILED_TO_SAVE_TEXT">
+		<value>O dispositivo de armazenamento está indisponível ou tem um erro.</value>
+	</data>	
+
+	<data name="IDS_FAILED_TO_LOADSAVE_TEXT">
+		<value>Seu dispositivo de armazenamento está indisponível ou tem um erro. Selecione outro dispositivo de armazenamento.</value>
+	</data>	
+
+	<data name="IDS_SELECTANEWDEVICE">
+		<value>Selecione outro dispos. armazen.</value>
+	</data>	
+
+	<data name="IDS_NODEVICE_TITLE">
+		<value>Nenhum disp. armaz. selecionado</value>
+	</data>	
+
+	<data name="IDS_NODEVICE_TEXT">
+		<value>Se não selecionar um dispositivo de armazenamento, o salvamento de jogos será desabilitado.</value>
+	</data>	
+
+	<data name="IDS_NODEVICE_ACCEPT">
+		<value>Selecionar um dispos. de armaz.</value>
+	</data>	
+
+	<data name="IDS_DEVICEGONE_TEXT">
+		<value>O dispositivo de armazenamento foi removido. Selecione outro dispositivo.</value>
+	</data>	
+
+	<data name="IDS_WARNING_ARCADE_TITLE">
+		<value>Retornar ao Menu Xbox</value>
+	</data>	
+
+	<data name="IDS_PRO_RETURNEDTOTITLESCREEN_TEXT">
+		<value>Você retornou à tela de título porque seu perfil do jogador foi desconectado.</value>
+	</data>	
+
+	<data name="IDS_PRO_RETURNEDTOMENU_TEXT">
+		<value>A partida terminou porque um perfil do jogador foi desconectado.</value>
+	</data>	
+
 	<data name="IDS_PRO_NOTONLINE_TITLE">
-		<value>Você não está conectado.</value>
-	</data>
-	<data name="IDS_PRO_NOTONLINE_ACCEPT">
-		<value>Conectar-se à "PSN"</value>
-	</data>
-	<data name="IDS_PRO_XBOXLIVE_NOTIFICATION">
-		<value>Este recurso exige que a sessão da "PSN" seja iniciada.
-</value>
-	</data>
+		<value>Perfil do jogador não online</value>
+	</data>	
+
 	<data name="IDS_PRO_NOTONLINE_TEXT">
-		<value>Este jogo tem recursos que exigem conexão com a "PSN", mas você está offline no momento.</value>
-	</data>
+		<value>Este jogo tem recursos que exigem um perfil do jogador habilitado para Xbox LIVE, mas você está offline no momento.</value>
+	</data>	
+
+	<data name="IDS_PRO_XBOXLIVE_NOTIFICATION">
+		<value>Este recurso exige um perfil do jogador que esteja conectado ao Xbox LIVE.</value>
+	</data>	
+
+	<data name="IDS_PRO_NOTONLINE_ACCEPT">
+		<value>Conectar ao Xbox LIVE</value>
+	</data>	
+
+	<data name="IDS_PRO_ACHIEVEMENTPROBLEM_TITLE">
+		<value>Problema com Brinde de Conquista</value>
+	</data>	
+
+	<data name="IDS_PRO_ACHIEVEMENTPROBLEM_TEXT">
+		<value> Houve um problema ao acessar seu perfil de jogador. Não foi possível conceder sua conquista no momento.</value>
+	</data>	
+
+	<data name="IDS_PRO_NOPROFILE_TITLE">
+		<value>Problema no perfil do jogador</value>
+	</data>	
+
+	<data name="IDS_PRO_NOPROFILEOPTIONS_TEXT">
+		<value>Falha ao salvar configurações no perfil do jogador.</value>
+	</data>	
+
+	<data name="IDS_PRO_GUESTPROFILE_TITLE">
+		<value>Perfil do Jogador Convidado</value>
+	</data>	
+
+	<data name="IDS_PRO_GUESTPROFILE_TEXT">
+		<value>O perfil do jogador convidado não pode acessar este recurso. Use um perfil do jogador diferente.</value>
+	</data>	
+
+	<data name="IDS_PRO_UNLOCKGAME_TEXT">
+		<value>Esta é a versão de avaliação do jogo Minecraft. Se você já tem a versão integral do jogo, acabou de ganhar uma conquista! 
+Desbloqueie a versão integral do jogo para curtir a diversão de Minecraft e para jogar com amigos de todo o mundo pelo Xbox LIVE.
+Deseja desbloquear a versão integral do jogo?</value>
+	</data>	
+
+	<data name="IDS_PRO_PROFILEPROBLEM_TEXT">
+		<value>Você está voltando ao menu principal devido a um problema para ler seu perfil.</value>
+	</data>	
 </root>
