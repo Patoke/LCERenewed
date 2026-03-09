@@ -133,7 +133,7 @@
       <DeploymentFiles>$(RemoteRoot)=$(ImagePath);$(RemoteRoot)\res=Xbox\res;$(RemoteRoot)=Xbox\AvatarAwards;$(RemoteRoot)\Tutorial=Xbox\Tutorial\Tutorial;$(RemoteRoot)=Xbox\584111F70AAAAAAA;$(RemoteRoot)=Xbox\kinect\speech;$(RemoteRoot)=Xbox\XZP\TMSFiles.xzp</DeploymentFiles>
     </Deploy>
     <PostBuildEvent>
-      <Command>set XCOPYFLAGS=/E /I /Y
+      <Command>set XCOPYFLAGS=/E /I /Y /D
 
 xcopy "$(ProjectDir)Common\Media\*" "$(TargetDir)Common\Media\" %XCOPYFLAGS%
 xcopy "$(ProjectDir)Common\res\*" "$(TargetDir)Common\res\" %XCOPYFLAGS%
@@ -197,7 +197,7 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
       <DeploymentFiles>$(RemoteRoot)=$(ImagePath);$(RemoteRoot)\res=Xbox\res;$(RemoteRoot)=Xbox\AvatarAwards;$(RemoteRoot)\Tutorial=Xbox\Tutorial\Tutorial;$(RemoteRoot)=Xbox\584111F70AAAAAAA;$(RemoteRoot)=Xbox\kinect\speech;$(RemoteRoot)=Xbox\XZP\TMSFiles.xzp</DeploymentFiles>
     </Deploy>
     <PostBuildEvent>
-      <Command>set XCOPYFLAGS=/E /I /Y
+      <Command>set XCOPYFLAGS=/E /I /Y /D
 
 xcopy "$(ProjectDir)Common\Media\*" "$(TargetDir)Common\Media\" %XCOPYFLAGS%
 xcopy "$(ProjectDir)Common\res\*" "$(TargetDir)Common\res\" %XCOPYFLAGS%
@@ -261,7 +261,7 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
       <DeploymentFiles>$(RemoteRoot)=$(ImagePath);$(RemoteRoot)\res=Xbox\res;$(RemoteRoot)=Xbox\AvatarAwards;$(RemoteRoot)\Tutorial=Xbox\Tutorial\Tutorial;$(RemoteRoot)=Xbox\584111F70AAAAAAA;$(RemoteRoot)=Xbox\kinect\speech</DeploymentFiles>
     </Deploy>
     <PostBuildEvent>
-      <Command>set XCOPYFLAGS=/E /I /Y
+      <Command>set XCOPYFLAGS=/E /I /Y /D
 
 xcopy "$(ProjectDir)Common\Media\*" "$(TargetDir)Common\Media\" %XCOPYFLAGS%
 xcopy "$(ProjectDir)Common\res\*" "$(TargetDir)Common\res\" %XCOPYFLAGS%

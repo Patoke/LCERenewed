@@ -311,12 +311,6 @@
     <None Include="Network Implementation Notes.txt">
       <Filter>Common\Source Files\Network</Filter>
     </None>
-    <None Include="Common\Audio\MilesSDK\redist64\mss64.dll">
-      <Filter>Windows64\Miles Sound System\dll</Filter>
-    </None>
-    <None Include="Common\Audio\MilesSDK\pdb\mss64.pdb">
-      <Filter>Windows64\Miles Sound System\dll</Filter>
-    </None>
     <None Include="Windows64\Iggy\lib\redist64\iggy_w64.dll">
       <Filter>Windows64\Iggy\dll</Filter>
     </None>
@@ -1996,12 +1990,6 @@
     <ClInclude Include="Xbox\Network\NetworkPlayerXbox.h">
       <Filter>Xbox\Network</Filter>
     </ClInclude>
-    <ClInclude Include="Windows64\Miles\include\rrcore.h">
-      <Filter>Windows64\Miles Sound System\include</Filter>
-    </ClInclude>
-    <ClInclude Include="Windows64\Miles\include\mss.h">
-      <Filter>Windows64\Miles Sound System\include</Filter>
-    </ClInclude>
     <ClInclude Include="Common\Console_Awards_enum.h">
       <Filter>Common\Source Files</Filter>
     </ClInclude>
@@ -3587,7 +3575,6 @@
     <Library Include="Windows64\4JLibs\libs\4J_Storage_d.lib">
       <Filter>Windows64\4JLibs\libs</Filter>
     </Library>
-    <Library Include="Common\Audio\MilesSDK\lib\mss64.lib" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Xbox\MinecraftWindows.ico">
