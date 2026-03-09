@@ -102,38 +102,11 @@
     <Filter Include="Common\Source Files">
       <UniqueIdentifier>{4dbeff57-70bc-4b4c-b5d0-4c6834968d85}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Common\Source Files\GameRules">
-      <UniqueIdentifier>{4be5c8d2-8944-4e8f-9d79-b1abc4b66f8f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\Trial">
-      <UniqueIdentifier>{ba24985e-3b16-45af-963e-9f2edca20b1a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\Tutorial">
-      <UniqueIdentifier>{77957a66-a869-4b9b-bbda-e7f43e01096f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\GameRules\LevelGeneration">
-      <UniqueIdentifier>{fa09ab64-0a3f-429b-93cb-149ee490767b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\GameRules\LevelGeneration\StructureActions">
-      <UniqueIdentifier>{dec59bc5-d9d3-4be5-b449-3df3b430eb39}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\Tutorial\Constraints">
-      <UniqueIdentifier>{0bcca89e-0d2d-407b-b1e4-878465404901}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\Tutorial\Hints">
-      <UniqueIdentifier>{395a09e4-1ff9-458c-8fb8-a4cb28aa4881}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\Tutorial\Tasks">
-      <UniqueIdentifier>{056ec81c-c93f-4c56-9bcb-697cda24a612}</UniqueIdentifier>
-    </Filter>
     <Filter Include="net\minecraft\client\renderer\texture">
       <UniqueIdentifier>{92ead381-f2b8-4c6d-a3ca-c6fbc7753361}</UniqueIdentifier>
     </Filter>
     <Filter Include="net\minecraft\client\renderer\texture\custom">
       <UniqueIdentifier>{2031e778-56ff-4126-b09d-4ec59453b21c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\DLC">
-      <UniqueIdentifier>{98e39923-fe62-42d5-8650-746c2d61efd2}</UniqueIdentifier>
     </Filter>
     <Filter Include="Windows64">
       <UniqueIdentifier>{094cddb4-1ac5-424b-80e3-e3b0e9bb3b05}</UniqueIdentifier>
@@ -174,24 +147,6 @@
     <Filter Include="Common\Source Files\Audio">
       <UniqueIdentifier>{94298ae6-25e0-4cc9-8c5a-efd53e156baa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Common\Source Files\Localisation">
-      <UniqueIdentifier>{d7537fdd-877b-461c-9c86-3235843fcfc0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\GameRules\LevelRules">
-      <UniqueIdentifier>{61e77fc3-d018-4e08-985c-9871eca81fe2}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\GameRules\LevelRules\Rules">
-      <UniqueIdentifier>{2c983999-feb8-40db-885b-abf061e2ab58}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\GameRules\LevelRules\RuleDefinitions">
-      <UniqueIdentifier>{093a811c-5f90-4c0e-b260-4b637079730a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\Network">
-      <UniqueIdentifier>{c2fdb165-80e4-4ce0-9bf1-12e5c58f83a5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\UI">
-      <UniqueIdentifier>{a04f2d63-3e47-470f-b4ac-c1d5caf8ce56}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Windows64\Iggy">
       <UniqueIdentifier>{a0aa2098-142e-4688-8d73-00ec7e5e9361}</UniqueIdentifier>
     </Filter>
@@ -204,56 +159,11 @@
     <Filter Include="Windows64\Iggy\gdraw">
       <UniqueIdentifier>{017984f1-6659-4a44-96fd-7dbb8f9b2654}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Common\Source Files\UI\Scenes">
-      <UniqueIdentifier>{5d6f34a3-c647-479d-a1a9-89a9ffca4ab9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\UI\Scenes\Help &amp; Options">
-      <UniqueIdentifier>{6f049254-6585-4a90-be74-70d3878d864f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\UI\Scenes\Debug">
-      <UniqueIdentifier>{e4051e75-f566-41ce-b86a-46c838872963}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\Colours">
-      <UniqueIdentifier>{18d3c9bc-132e-4770-a665-fc030eb86394}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\zlib">
-      <UniqueIdentifier>{3a9d8989-ff64-411c-84ad-b7dfb2520d5a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\UI\Components">
-      <UniqueIdentifier>{67f51112-db23-4c8a-af1b-f748f7bbce8f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\UI\All Platforms">
-      <UniqueIdentifier>{a47c9da7-bf36-42ae-aedf-c00c071c0582}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\UI\Controls">
-      <UniqueIdentifier>{017967fb-353e-448b-ae2c-639a182f3ee0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\UI\Scenes\Frontend Menu screens">
-      <UniqueIdentifier>{f4d6c5f9-40d6-4e52-bc03-fef06e9f0221}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\UI\Scenes\In-Game Menu Screens">
-      <UniqueIdentifier>{122ac1f3-113d-4f91-8676-bbe16e236f4f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\UI\Scenes\In-Game Menu Screens\Containers">
-      <UniqueIdentifier>{1d28fadf-f748-4616-830b-ec2faa1b5f8e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\BuildVer">
-      <UniqueIdentifier>{bf865c6c-8bf4-4bd6-aaed-ff2a7c92706a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\Leaderboards">
-      <UniqueIdentifier>{3eefa342-44e2-493a-9165-40f85bcef557}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Windows64\Source Files\SentientLibs">
       <UniqueIdentifier>{f88c0f6a-8051-41e7-9bf6-b9d3c7bb2937}</UniqueIdentifier>
     </Filter>
     <Filter Include="net\minecraft\server\commands">
       <UniqueIdentifier>{34edb787-189e-49c7-8412-f5def16b6f99}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\Network\Sony">
-      <UniqueIdentifier>{15633337-4260-4618-bffa-df945dba2b1a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Common\Source Files\Telemetry">
-      <UniqueIdentifier>{af98fe8e-ce25-437a-8ab9-efa9d8f0a5b0}</UniqueIdentifier>
     </Filter>
     <Filter Include="net\minecraft\client\resources">
       <UniqueIdentifier>{889a84db-3009-4a7c-8234-4bf93d412690}</UniqueIdentifier>
@@ -284,6 +194,96 @@
     </Filter>
     <Filter Include="Windows64\Iggy\dll">
       <UniqueIdentifier>{e2347bb6-fec6-4a9d-949e-db149c20c800}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\BuildVer">
+      <UniqueIdentifier>{bf865c6c-8bf4-4bd6-aaed-ff2a7c92706a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\Colours">
+      <UniqueIdentifier>{18d3c9bc-132e-4770-a665-fc030eb86394}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\DLC">
+      <UniqueIdentifier>{98e39923-fe62-42d5-8650-746c2d61efd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\GameRules">
+      <UniqueIdentifier>{4be5c8d2-8944-4e8f-9d79-b1abc4b66f8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\GameRules\LevelGeneration">
+      <UniqueIdentifier>{fa09ab64-0a3f-429b-93cb-149ee490767b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\GameRules\LevelGeneration\StructureActions">
+      <UniqueIdentifier>{dec59bc5-d9d3-4be5-b449-3df3b430eb39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\GameRules\LevelRules">
+      <UniqueIdentifier>{61e77fc3-d018-4e08-985c-9871eca81fe2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\GameRules\LevelRules\Rules">
+      <UniqueIdentifier>{2c983999-feb8-40db-885b-abf061e2ab58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\GameRules\LevelRules\RuleDefinitions">
+      <UniqueIdentifier>{093a811c-5f90-4c0e-b260-4b637079730a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\Leaderboards">
+      <UniqueIdentifier>{3eefa342-44e2-493a-9165-40f85bcef557}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\Localisation">
+      <UniqueIdentifier>{d7537fdd-877b-461c-9c86-3235843fcfc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\Network">
+      <UniqueIdentifier>{c2fdb165-80e4-4ce0-9bf1-12e5c58f83a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\Network\Sony">
+      <UniqueIdentifier>{15633337-4260-4618-bffa-df945dba2b1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\Telemetry">
+      <UniqueIdentifier>{af98fe8e-ce25-437a-8ab9-efa9d8f0a5b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\Trial">
+      <UniqueIdentifier>{ba24985e-3b16-45af-963e-9f2edca20b1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\Tutorial">
+      <UniqueIdentifier>{77957a66-a869-4b9b-bbda-e7f43e01096f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\Tutorial\Constraints">
+      <UniqueIdentifier>{0bcca89e-0d2d-407b-b1e4-878465404901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\Tutorial\Hints">
+      <UniqueIdentifier>{395a09e4-1ff9-458c-8fb8-a4cb28aa4881}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\Tutorial\Tasks">
+      <UniqueIdentifier>{056ec81c-c93f-4c56-9bcb-697cda24a612}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\UI">
+      <UniqueIdentifier>{a04f2d63-3e47-470f-b4ac-c1d5caf8ce56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\UI\Scenes">
+      <UniqueIdentifier>{5d6f34a3-c647-479d-a1a9-89a9ffca4ab9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\UI\Scenes\Help &amp; Options">
+      <UniqueIdentifier>{6f049254-6585-4a90-be74-70d3878d864f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\UI\Scenes\Debug">
+      <UniqueIdentifier>{e4051e75-f566-41ce-b86a-46c838872963}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\UI\Scenes\Frontend Menu screens">
+      <UniqueIdentifier>{f4d6c5f9-40d6-4e52-bc03-fef06e9f0221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\UI\Scenes\In-Game Menu Screens">
+      <UniqueIdentifier>{122ac1f3-113d-4f91-8676-bbe16e236f4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\UI\Scenes\In-Game Menu Screens\Containers">
+      <UniqueIdentifier>{1d28fadf-f748-4616-830b-ec2faa1b5f8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\UI\Components">
+      <UniqueIdentifier>{67f51112-db23-4c8a-af1b-f748f7bbce8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\UI\All Platforms">
+      <UniqueIdentifier>{a47c9da7-bf36-42ae-aedf-c00c071c0582}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\UI\Controls">
+      <UniqueIdentifier>{017967fb-353e-448b-ae2c-639a182f3ee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Source Files\zlib">
+      <UniqueIdentifier>{3a9d8989-ff64-411c-84ad-b7dfb2520d5a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1153,15 +1153,6 @@
     <ClInclude Include="Common\Potion_Macros.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="Common\Console_Awards_enum.h">
-      <Filter>Common\Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\Console_Debug_enum.h">
-      <Filter>Common\Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\ConsoleGameMode.h">
-      <Filter>Common\Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="Common\GameRules\ConsoleGenerateStructureAction.h">
       <Filter>Common\Source Files\GameRules\LevelGeneration</Filter>
     </ClInclude>
@@ -1323,12 +1314,6 @@
     </ClInclude>
     <ClInclude Include="VillagerGolemRenderer.h">
       <Filter>net\minecraft\client\renderer\entity</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\Audio\Consoles_SoundEngine.h">
-      <Filter>Common\Source Files\Audio</Filter>
-    </ClInclude>
-    <ClInclude Include="Common\Audio\SoundEngine.h">
-      <Filter>Common\Source Files\Audio</Filter>
     </ClInclude>
     <ClInclude Include="StringTable.h">
       <Filter>Common\Source Files\Localisation</Filter>
@@ -2016,6 +2001,24 @@
     </ClInclude>
     <ClInclude Include="Windows64\Miles\include\mss.h">
       <Filter>Windows64\Miles Sound System\include</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Console_Awards_enum.h">
+      <Filter>Common\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Console_Debug_enum.h">
+      <Filter>Common\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\ConsoleGameMode.h">
+      <Filter>Common\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Audio\Consoles_SoundEngine.h">
+      <Filter>Common\Source Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Audio\SoundEngine.h">
+      <Filter>Common\Source Files\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Audio\miniaudio\miniaudio.h">
+      <Filter>Common\Source Files\Audio</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -2799,12 +2802,6 @@
     <ClCompile Include="Common\Tutorial\LookAtTileHint.cpp">
       <Filter>Common\Source Files\Tutorial\Hints</Filter>
     </ClCompile>
-    <ClCompile Include="Common\Console_Utils.cpp">
-      <Filter>Common\Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Common\ConsoleGameMode.cpp">
-      <Filter>Common\Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Common\GameRules\ConsoleGenerateStructure.cpp">
       <Filter>Common\Source Files\GameRules\LevelGeneration</Filter>
     </ClCompile>
@@ -2903,12 +2900,6 @@
     </ClCompile>
     <ClCompile Include="VillagerGolemModel.cpp">
       <Filter>net\minecraft\client\model</Filter>
-    </ClCompile>
-    <ClCompile Include="Common\Audio\SoundEngine.cpp">
-      <Filter>Common\Source Files\Audio</Filter>
-    </ClCompile>
-    <ClCompile Include="Common\Audio\SoundNames.cpp">
-      <Filter>Common\Source Files\Audio</Filter>
     </ClCompile>
     <ClCompile Include="StringTable.cpp">
       <Filter>Common\Source Files\Localisation</Filter>
@@ -3324,9 +3315,6 @@
     <ClCompile Include="Common\UI\UIScene_EULA.cpp">
       <Filter>Common\Source Files\UI\Scenes\Frontend Menu screens</Filter>
     </ClCompile>
-    <ClCompile Include="Common\Audio\Consoles_SoundEngine.cpp">
-      <Filter>Common\Source Files\Audio</Filter>
-    </ClCompile>
     <ClCompile Include="Common\UI\UIControl_DynamicLabel.cpp">
       <Filter>Common\Source Files\UI\Controls</Filter>
     </ClCompile>
@@ -3551,6 +3539,24 @@
     </ClCompile>
     <ClCompile Include="Xbox\Network\NetworkPlayerXbox.cpp">
       <Filter>Xbox\Network</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Console_Utils.cpp">
+      <Filter>Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\ConsoleGameMode.cpp">
+      <Filter>Common\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Audio\SoundNames.cpp">
+      <Filter>Common\Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Audio\Consoles_SoundEngine.cpp">
+      <Filter>Common\Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Audio\SoundEngine.cpp">
+      <Filter>Common\Source Files\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Audio\miniaudio\miniaudio.cpp">
+      <Filter>Common\Source Files\Audio</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

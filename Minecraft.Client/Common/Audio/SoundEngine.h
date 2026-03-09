@@ -3,6 +3,8 @@ class Mob;
 class Options;
 using namespace std;
 #include "..\..\Minecraft.World\SoundTypes.h"
+#include "Common/Audio/miniaudio/miniaudio.h"
+#include <vector>
 
 enum eMUSICFILES
 {
@@ -30,7 +32,7 @@ enum eMUSICFILES
 #endif
 	eStream_Overworld_piano1,
 	eStream_Overworld_piano2,
-	eStream_Overworld_piano3, // <-- make piano3 the last overworld one
+	eStream_Overworld_piano3,
 	// Nether
 	eStream_Nether1,
 	eStream_Nether2,
@@ -61,7 +63,6 @@ enum eMUSICTYPE
 	eMusicType_CD,
 };
 
-
 enum MUSIC_STREAMSTATE
 {
 	eMusicStreamState_Idle=0,
@@ -76,7 +77,7 @@ enum MUSIC_STREAMSTATE
 
 typedef struct
 {
-	F32 x,y,z,volume,pitch;
+	float x,y,z,volume,pitch;
 	int iSound;
 	bool bIs3D;	
 	bool bUseSoundsPitchVal;	
@@ -85,6 +86,12 @@ typedef struct
 #endif
 }
 AUDIO_INFO;
+
+struct MiniAudioSound
+{
+	ma_sound   sound;
+	AUDIO_INFO info;
+};
 
 class SoundEngine : public ConsoleSoundEngine
 {
@@ -112,32 +119,31 @@ public:
 	int getMusicID(int iDomain);
 	int getMusicID(const wstring& name);
 	void SetStreamingSounds(int iOverworldMin, int iOverWorldMax, int iNetherMin, int iNetherMax, int iEndMin, int iEndMax, int iCD1);
-	void updateMiles();			// AP added so Vita can update all the Miles functions during the mixer callback
 	void playMusicUpdate();
 
 private:
 	float getMasterMusicVolume();
-	// platform specific functions
-#ifdef __PS3__
-	int initAudioHardware(int iMinSpeakers);
-#else
-	int initAudioHardware(int iMinSpeakers)	{ return iMinSpeakers;}
-#endif
-	
+	int initAudioHardware(int iMinSpeakers) { return iMinSpeakers; }
 	int GetRandomishTrack(int iStart,int iEnd);
+	void updateMiniAudio();
 
-	HMSOUNDBANK m_hBank;
-	HDIGDRIVER m_hDriver;
-	HSTREAM m_hStream;
+	static int OpenStreamThreadProc( void* lpParameter );
+
+	// miniaudio engine
+	ma_engine        m_engine;
+	ma_engine_config m_engineConfig;
+	ma_sound         m_musicStream;
+	bool             m_musicStreamActive;
+
+	// active one-shot sounds - cleaned up each tick
+	std::vector<MiniAudioSound *> m_activeSounds;
 
 	static char m_szSoundPath[];
 	static char m_szMusicPath[];
-	static char m_szRedistName[];
 	static char *m_szStreamFileA[eStream_Max];
 
 	AUDIO_LISTENER m_ListenerA[MAX_LOCAL_PLAYERS];
 	int m_validListenerCount;
-
 
 	Random *random;
 	int m_musicID;
@@ -145,24 +151,19 @@ private:
 	int m_StreamState;
 	int m_MusicType;
 	AUDIO_INFO m_StreamingAudioInfo;
-	wstring m_CDMusic;
 	BOOL m_bSystemMusicPlaying;
 	float m_MasterMusicVolume;
 	float m_MasterEffectsVolume;
 
 	C4JThread *m_openStreamThread;
-	static int OpenStreamThreadProc( void* lpParameter );
 	char m_szStreamName[255];
+	char m_szSoundName[256];
 	int CurrentSoundsPlaying[eSoundType_MAX+eSFX_MAX];
 
-	// streaming music files - will be different for mash-up packs
+	// streaming music range tracking
 	int m_iStream_Overworld_Min,m_iStream_Overworld_Max;
 	int m_iStream_Nether_Min,m_iStream_Nether_Max;
 	int m_iStream_End_Min,m_iStream_End_Max;
 	int m_iStream_CD_1;
 	bool *m_bHeardTrackA;
-
-#ifdef __ORBIS__
-	int32_t m_hBGMAudio;
-#endif
-}; 
+};

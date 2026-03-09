@@ -150,10 +150,7 @@ xcopy "$(ProjectDir)Windows64Media\Media\*" "$(TargetDir)Windows64Media\Media\" 
 xcopy "$(ProjectDir)Windows64Media\Sound\*" "$(TargetDir)Windows64Media\Sound\" %XCOPYFLAGS%
 xcopy "$(ProjectDir)Windows64Media\Tutorial\*" "$(TargetDir)Windows64Media\Tutorial\" %XCOPYFLAGS%
 
-xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XCOPYFLAGS%
-
-xcopy "$(ProjectDir)Common\Audio\MilesSDK\redist64\mss64.dll" "$(TargetDir)" %XCOPYFLAGS%
-xcopy "$(ProjectDir)Common\Audio\MilesSDK\pdb\mss64.pdb" "$(TargetDir)" %XCOPYFLAGS%</Command>
+xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XCOPYFLAGS%</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copy Assets</Message>
@@ -217,10 +214,7 @@ xcopy "$(ProjectDir)Windows64Media\Media\*" "$(TargetDir)Windows64Media\Media\" 
 xcopy "$(ProjectDir)Windows64Media\Sound\*" "$(TargetDir)Windows64Media\Sound\" %XCOPYFLAGS%
 xcopy "$(ProjectDir)Windows64Media\Tutorial\*" "$(TargetDir)Windows64Media\Tutorial\" %XCOPYFLAGS%
 
-xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XCOPYFLAGS%
-
-xcopy "$(ProjectDir)Common\Audio\MilesSDK\redist64\mss64.dll" "$(TargetDir)" %XCOPYFLAGS%
-xcopy "$(ProjectDir)Common\Audio\MilesSDK\pdb\mss64.pdb" "$(TargetDir)" %XCOPYFLAGS%</Command>
+xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XCOPYFLAGS%</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copy Assets</Message>
@@ -284,10 +278,7 @@ xcopy "$(ProjectDir)Windows64Media\Media\*" "$(TargetDir)Windows64Media\Media\" 
 xcopy "$(ProjectDir)Windows64Media\Sound\*" "$(TargetDir)Windows64Media\Sound\" %XCOPYFLAGS%
 xcopy "$(ProjectDir)Windows64Media\Tutorial\*" "$(TargetDir)Windows64Media\Tutorial\" %XCOPYFLAGS%
 
-xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XCOPYFLAGS%
-
-xcopy "$(ProjectDir)Common\Audio\MilesSDK\redist64\mss64.dll" "$(TargetDir)" %XCOPYFLAGS%
-xcopy "$(ProjectDir)Common\Audio\MilesSDK\pdb\mss64.pdb" "$(TargetDir)" %XCOPYFLAGS%</Command>
+xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XCOPYFLAGS%</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copy Assets</Message>
@@ -417,6 +408,7 @@ xcopy "$(ProjectDir)Common\Audio\MilesSDK\pdb\mss64.pdb" "$(TargetDir)" %XCOPYFL
     <ClInclude Include="Common\App_enums.h" />
     <ClInclude Include="Common\App_structs.h" />
     <ClInclude Include="Common\Audio\Consoles_SoundEngine.h" />
+    <ClInclude Include="Common\Audio\miniaudio\miniaudio.h" />
     <ClInclude Include="Common\Audio\SoundEngine.h" />
     <ClInclude Include="Common\BuildVer.h" />
     <ClInclude Include="Common\Colours\ColourTable.h" />
@@ -1195,6 +1187,11 @@ xcopy "$(ProjectDir)Common\Audio\MilesSDK\pdb\mss64.pdb" "$(TargetDir)" %XCOPYFL
     <ClCompile Include="ClientConstants.cpp" />
     <ClCompile Include="ClockTexture.cpp" />
     <ClCompile Include="Common\Audio\Consoles_SoundEngine.cpp" />
+    <ClCompile Include="Common\Audio\miniaudio\miniaudio.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="Common\Audio\SoundEngine.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>

@@ -1,4 +1,5 @@
 #include "stdafx.h"
+#include "SoundEngine.h"
 #include "Consoles_SoundEngine.h"
 
 
