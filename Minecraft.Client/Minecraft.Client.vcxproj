@@ -114,7 +114,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
-      <AdditionalDependencies>d3d11.lib;..\Minecraft.World\x64_Debug\Minecraft.World.lib;%(AdditionalDependencies);XInput9_1_0.lib;Common\Audio\MilesSDK\lib\mss64.lib;Windows64\HeapInspector\Server\PC_Windows\Debug_x64_VS2012\HeapInspectorServer.lib;wsock32.lib</AdditionalDependencies>
+      <AdditionalDependencies>d3d11.lib;..\Minecraft.World\x64_Debug\Minecraft.World.lib;%(AdditionalDependencies);XInput9_1_0.lib;Windows64\HeapInspector\Server\PC_Windows\Debug_x64_VS2012\HeapInspectorServer.lib;wsock32.lib</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
       <SuppressStartupBanner>false</SuppressStartupBanner>
     </Link>
@@ -178,7 +178,7 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(OutDir)$(ProjectName).pdb</ProgramDatabaseFile>
-      <AdditionalDependencies>d3d11.lib;..\Minecraft.World\x64_Release\Minecraft.World.lib;XInput9_1_0.lib;Common\Audio\MilesSDK\lib\mss64.lib;Windows64\Iggy\lib\iggy_w64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d11.lib;..\Minecraft.World\x64_Release\Minecraft.World.lib;XInput9_1_0.lib;Windows64\Iggy\lib\iggy_w64.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
       <SuppressStartupBanner>false</SuppressStartupBanner>
     </Link>
@@ -331,16 +331,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <None Include="Common\Audio\MilesSDK\pdb\mss64.pdb">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</DeploymentContent>
-    </None>
-    <None Include="Common\Audio\MilesSDK\redist64\mss64.dll">
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</DeploymentContent>
-    </None>
     <None Include="Network Implementation Notes.txt" />
     <None Include="Windows64\GameConfig\Minecraft.gameconfig">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
@@ -1057,8 +1047,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="Windows64\Miles\include\mss.h" />
-    <ClInclude Include="Windows64\Miles\include\rrcore.h" />
     <ClInclude Include="Windows64\Minecraft_Macros.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
@@ -1903,7 +1891,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <Library Include="Windows64\Iggy\lib\iggy_w64.lib">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
     </Library>
-    <Library Include="Common\Audio\MilesSDK\lib\mss64.lib" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Xbox\MinecraftWindows.ico">
