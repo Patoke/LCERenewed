@@ -179,11 +179,11 @@ void SoundEngine::updateMiniAudio()
 				ma_engine_listener_set_position(&m_engine, 0,
 					m_ListenerA[i].vPosition.x,
 					m_ListenerA[i].vPosition.y,
-					m_ListenerA[i].vPosition.z);
+					-m_ListenerA[i].vPosition.z);
 				ma_engine_listener_set_direction(&m_engine, 0,
 					m_ListenerA[i].vOrientFront.x,
 					m_ListenerA[i].vOrientFront.y,
-					m_ListenerA[i].vOrientFront.z);
+					-m_ListenerA[i].vOrientFront.z);
 				ma_engine_listener_set_world_up(&m_engine, 0, 0.0f, 1.0f, 0.0f);
 				break;
 			}
@@ -247,7 +247,7 @@ void SoundEngine::updateMiniAudio()
 			}
 			else
 			{
-				ma_sound_set_position(&s->sound, s->info.x, s->info.y, s->info.z);
+				ma_sound_set_position(&s->sound, s->info.x, s->info.y, -s->info.z);
 			}
 		}
 
@@ -446,7 +446,7 @@ void SoundEngine::play(int iSound, float x, float y, float z, float volume, floa
 	ma_sound_set_attenuation_model(&s->sound, ma_attenuation_model_linear);
 	ma_sound_set_volume(&s->sound, finalVolume);
 	ma_sound_set_pitch(&s->sound, pitch);
-	ma_sound_set_position(&s->sound, x, y, z);
+	ma_sound_set_position(&s->sound, x, y, -z);
 
 	ma_sound_start(&s->sound);
 
@@ -981,7 +981,7 @@ void SoundEngine::playMusicUpdate()
 					ma_sound_set_position(&m_musicStream,
 						m_StreamingAudioInfo.x,
 						m_StreamingAudioInfo.y,
-						m_StreamingAudioInfo.z);
+						-m_StreamingAudioInfo.z);
 				}
 			}
 			else
