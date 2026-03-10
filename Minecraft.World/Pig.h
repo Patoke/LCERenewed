@@ -23,9 +23,9 @@ public:
 	virtual bool useNewAi();
 
 protected:
+	virtual bool removeWhenFarAway();
 	virtual void registerAttributes();
 	virtual void newServerAiStep();
-	virtual bool removeWhenFarAway();
 
 public:
 	virtual bool canBeControlledByRider();

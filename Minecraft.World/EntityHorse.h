@@ -277,6 +277,9 @@ public:
 	// 4J-JEV: Made public for tooltip code, doesn't change state anyway.
 	virtual bool isReadyForParenting();
 
+protected:
+	virtual bool removeWhenFarAway();
+
 public:
 	virtual bool renderName();
 	virtual bool rideableEntity();
@@ -308,7 +311,6 @@ public:
 
 protected:
 	virtual bool useNewAi();
-	virtual bool removeWhenFarAway();
 
 public:
 	virtual void onPlayerJump(int jumpAmount);

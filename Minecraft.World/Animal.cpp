@@ -221,6 +221,12 @@ void Animal::readAdditionalSaveData(CompoundTag *tag)
 	setDespawnProtected();
 }
 
+void Animal::dropLeash(bool synch, bool createItemDrop)
+{
+	setDespawnProtected();
+	Mob::dropLeash(synch, createItemDrop);
+}
+
 shared_ptr<Entity> Animal::findAttackTarget()
 {
 	if (fleeTime > 0) return nullptr;
@@ -471,12 +477,6 @@ void Animal::updateDespawnProtectedState()
 bool Animal::isDespawnProtected()
 {
 	return m_isDespawnProtected;
-}
-
-void Animal::dropLeash(bool synch, bool createItemDrop)
-{
-	setDespawnProtected();
-	Mob::dropLeash(synch, createItemDrop);
 }
 
 void Animal::setDespawnProtected()
