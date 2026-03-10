@@ -1617,8 +1617,13 @@ void Entity::rideTick()
 
 	// jeb: This caused the crosshair to "drift" while riding horses. For now I've just disabled it,
 	//      because I can't figure out what it's needed for. Riding boats and minecarts seem unaffected...
-	// yRot += yra;
-	// xRot += xra;
+	// 
+	// 3UR: re-enabled this for TU20 but only for rideable minecarts
+	if (riding->instanceof(eTYPE_MINECART_RIDEABLE))
+	{
+		yRot += yra;
+		xRot += xra;
+	}
 }
 
 void Entity::positionRider()
