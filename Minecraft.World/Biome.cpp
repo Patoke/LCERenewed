@@ -122,6 +122,7 @@ Biome::Biome(int id) : id(id)
 	enemies.push_back(new MobSpawnerData(eTYPE_CREEPER, 10, 4, 4));
 	enemies.push_back(new MobSpawnerData(eTYPE_SLIME, 10, 4, 4));
 	enemies.push_back(new MobSpawnerData(eTYPE_ENDERMAN, 1, 1, 4));
+	enemies.push_back(new MobSpawnerData(eTYPE_WITCH, 1, 1, 1));
 
 	// wolves are added to forests and taigas
 
