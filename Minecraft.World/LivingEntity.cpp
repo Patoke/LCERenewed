@@ -259,9 +259,16 @@ void LivingEntity::baseTick()
 	}
 
 	// If lastHurtByMob is dead, remove it
-	if (lastHurtByMob != NULL && !lastHurtByMob->isAlive())
+	if (lastHurtByMob != NULL)
 	{
-		setLastHurtByMob(nullptr);
+		if (!lastHurtByMob->isAlive())
+		{	
+			setLastHurtByMob(nullptr);
+		}
+		else if (tickCount - lastHurtByMobTimestamp > 100)
+		{	
+			setLastHurtByMob(nullptr);
+		}
 	}
 
 	// Update effects
