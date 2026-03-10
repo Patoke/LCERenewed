@@ -25,6 +25,7 @@ public:
 protected:
 	virtual void registerAttributes();
 	virtual void newServerAiStep();
+	virtual bool removeWhenFarAway();
 
 public:
 	virtual bool canBeControlledByRider();

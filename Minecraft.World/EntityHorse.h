@@ -308,6 +308,7 @@ public:
 
 protected:
 	virtual bool useNewAi();
+	virtual bool removeWhenFarAway();
 
 public:
 	virtual void onPlayerJump(int jumpAmount);

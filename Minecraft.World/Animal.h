@@ -78,5 +78,6 @@ private:
 public:
 	virtual bool isDespawnProtected();
 	virtual void setDespawnProtected();
+	virtual void dropLeash(bool synch, bool createItemDrop);
 
 };

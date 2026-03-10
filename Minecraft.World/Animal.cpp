@@ -294,7 +294,7 @@ int Animal::getAmbientSoundInterval()
 
 bool Animal::removeWhenFarAway()
 {
-	return !isDespawnProtected();	// 4J changed - was false
+	return !hasCustomName() && !isLeashed() && !isDespawnProtected();
 }
 
 int Animal::getExperienceReward(shared_ptr<Player> killedBy)
@@ -471,6 +471,12 @@ void Animal::updateDespawnProtectedState()
 bool Animal::isDespawnProtected()
 {
 	return m_isDespawnProtected;
+}
+
+void Animal::dropLeash(bool synch, bool createItemDrop)
+{
+	setDespawnProtected();
+	Mob::dropLeash(synch, createItemDrop);
 }
 
 void Animal::setDespawnProtected()

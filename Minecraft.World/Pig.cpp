@@ -47,6 +47,11 @@ bool Pig::useNewAi()
 	return true;
 }
 
+bool Pig::removeWhenFarAway()
+{
+	return Animal::removeWhenFarAway() && !hasSaddle();
+}
+
 void Pig::registerAttributes()
 {
 	Animal::registerAttributes();
