@@ -14,4 +14,5 @@ HellBiome::HellBiome(int id) : Biome(id)
 	enemies.push_back(new MobSpawnerData(eTYPE_GHAST, 50, 4, 4));
 	enemies.push_back(new MobSpawnerData(eTYPE_PIGZOMBIE, 100, 4, 4));
 	enemies.push_back(new MobSpawnerData(eTYPE_LAVASLIME, 1, 4, 4));
+	enemies.push_back(new MobSpawnerData(eTYPE_SKELETON, 1, 4, 4));
 }
