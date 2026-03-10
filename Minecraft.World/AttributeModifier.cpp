@@ -122,8 +122,15 @@ HtmlString AttributeModifier::getHoverText(eATTRIBUTE_ID attribute)
 		assert(0);
 	}
 
-	wchar_t formatted[256];
-	swprintf(formatted, 256, L"%ls%d%ls %ls", (amount > 0 ? L"+" : L"-"), (int) displayAmount, (percentage ? L"%" : L""), app.GetString(Attribute::getName(attribute)));
+    wchar_t formatted[256];
+    if (percentage)
+    {
+        swprintf(formatted, 256, L"%ls%d%ls %ls", (amount > 0 ? L"+" : L"-"), (int) displayAmount, L"%", app.GetString(Attribute::getName(attribute)));
+    }
+    else
+    {
+        swprintf(formatted, 256, L"%ls%.1g %ls", (amount > 0 ? L"+" : L"-"), displayAmount, app.GetString(Attribute::getName(attribute)));
+    }
 
 	return HtmlString(formatted, color);
 }
