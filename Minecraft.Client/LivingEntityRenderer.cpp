@@ -491,7 +491,7 @@ void LivingEntityRenderer::renderNameTag(shared_ptr<LivingEntity> mob, const wst
 	float s = 1 / 60.0f * size;
 
 	glPushMatrix();
-	glTranslatef((float) x + 0, (float) y + 2.3f, (float) z);
+	glTranslatef((float) x, (float) y + mob->bbHeight + 0.5f, (float) z);
 	glNormal3f(0, 1, 0);
 
 	glRotatef(-this->entityRenderDispatcher->playerRotY, 0, 1, 0);
