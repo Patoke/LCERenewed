@@ -3308,14 +3308,15 @@ void Minecraft::tick(bool bFirst, bool bUpdateTextures)
 							{
 								*piUse=IDS_TOOLTIPS_UNLEASH;
 							}
-							else if (heldItemId == Item::lead_Id)
+							// 4J: fix improper tooltips for TU20
+							/*else if (heldItemId == Item::lead_Id)
 							{
 								if (!mob->isLeashed()) *piUse=IDS_TOOLTIPS_LEASH;
 							}
 							else if (heldItemId == Item::nameTag_Id)
 							{
 								*piUse=IDS_TOOLTIPS_NAME;
-							}
+							}*/
 						}
 						*piAction=IDS_TOOLTIPS_HIT;
 						break;	
