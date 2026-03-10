@@ -445,7 +445,7 @@ void PlayerRenderer::additionalRendering(shared_ptr<LivingEntity> _mob, float a)
 	}
 }
 
-void PlayerRenderer::renderNameTags(shared_ptr<LivingEntity> player, double x, double y, double z, wstring msg, float scale, double dist)
+void PlayerRenderer::renderNameTags(shared_ptr<LivingEntity> player, double x, double y, double z, const wstring &msg, float scale, double dist)
 {
 #if 0
     if (dist < 10 * 10)
@@ -471,7 +471,17 @@ void PlayerRenderer::renderNameTags(shared_ptr<LivingEntity> player, double x, d
     }
 #endif
 
-    LivingEntityRenderer::renderNameTags(player, x, y, z, msg, scale, dist);
+	shared_ptr<Player> pPlayer = dynamic_pointer_cast<Player>(player);
+	int color = getNametagColour(pPlayer->getPlayerIndex());
+
+	if (player->isSleeping())
+	{
+		renderNameTag(player, msg, x, y - 1.5f, z, 64, color);
+	}
+	else
+	{
+		renderNameTag(player, msg, x, y, z, 64, color);
+	}
 }
 
 void PlayerRenderer::scale(shared_ptr<LivingEntity> player, float a)
