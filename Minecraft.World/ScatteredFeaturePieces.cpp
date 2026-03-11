@@ -12,8 +12,8 @@
 void ScatteredFeaturePieces::loadStatic()
 {
 	StructureFeatureIO::setPieceId(eStructurePiece_DesertPyramidPiece, DesertPyramidPiece::Create, L"TeDP");
-	StructureFeatureIO::setPieceId(eStructurePiece_JunglePyramidPiece, DesertPyramidPiece::Create, L"TeJP");
-	StructureFeatureIO::setPieceId(eStructurePiece_SwamplandHut, DesertPyramidPiece::Create, L"TeSH");
+	StructureFeatureIO::setPieceId(eStructurePiece_JunglePyramidPiece, JunglePyramidPiece::Create, L"TeJP");
+	StructureFeatureIO::setPieceId(eStructurePiece_SwamplandHut, SwamplandHut::Create, L"TeSH");
 }
 
 ScatteredFeaturePieces::ScatteredFeaturePiece::ScatteredFeaturePiece()
