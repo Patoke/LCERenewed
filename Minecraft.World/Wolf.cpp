@@ -509,7 +509,7 @@ void Wolf::setCollarColor(int color)
 // 4J-PB added for tooltips
 int Wolf::GetSynchedHealth()	
 {
-	return getEntityData()->getInteger(DATA_HEALTH_ID);
+	return getEntityData()->getFloat(DATA_HEALTH_ID);
 }	
 
 shared_ptr<AgableMob> Wolf::getBreedOffspring(shared_ptr<AgableMob> target)
