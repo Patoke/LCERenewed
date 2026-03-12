@@ -568,13 +568,11 @@ public:
 	static const int record_05_Id			= 2260;
 	static const int record_06_Id			= 2261;
 	static const int record_07_Id			= 2262;
-	static const int record_09_Id			= 2263;
-	static const int record_10_Id		    = 2264;
-	static const int record_11_Id		    = 2265;
-	static const int record_12_Id			= 2266;
-
-	// 4J-PB - this one isn't playable in the PC game, but is fine in ours
-	static const int record_08_Id			= 2267;		
+	static const int record_08_Id			= 2263;		
+	static const int record_09_Id			= 2264;
+	static const int record_10_Id		    = 2265;
+	static const int record_11_Id		    = 2266;
+	static const int record_12_Id			= 2267;
 
 	// TU9
 	static const int fireball_Id			 = 385;
