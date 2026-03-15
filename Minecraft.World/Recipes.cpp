@@ -765,7 +765,7 @@ Recipes::Recipes()
 		L'#', Item::ironIngot, L'X', Item::redStone,
 		L'T');
 
-	addShapedRecipy(new ItemInstance(Item::map, 1), //
+	addShapedRecipy(new ItemInstance((Item*)Item::emptyMap, 1), //
 		L"ssscicig",
 		L"###", //
 		L"#X#", //
