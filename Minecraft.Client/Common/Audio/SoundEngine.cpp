@@ -26,7 +26,6 @@ char *SoundEngine::m_szStreamFileA[eStream_Max] =
 	"hal4",
 	"nuance1",
 	"nuance2",
-#ifndef _XBOX
 	// add the new music tracks
 	"creative1",
 	"creative2",
@@ -38,7 +37,6 @@ char *SoundEngine::m_szStreamFileA[eStream_Max] =
 	"menu2",
 	"menu3",
 	"menu4",
-#endif	
 	"piano1",
 	"piano2",
 	"piano3",
