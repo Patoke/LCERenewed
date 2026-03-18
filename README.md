@@ -1,24 +1,17 @@
 # LCE Renewed
 
-A fork of the December 2014 Mincraft LCE source where we aim to implement all newer title updates.
+A fork of the December PSVita leaked source code of *Minecraft: Legacy Console Edition* by 4J-Studios which aims at backporting updates from later versions of the game via decompilation.
 
 # How do I contribute?
 
-For people wanting to contribute just create a [Pull Request](https://github.com/Patoke/LCERenewed/pulls) but remember **we have strict guidelines** which can be found below, We also do NOT allow code produced by AI or guessed implementations.
+For people who want to contribute or check our guidelines, please check out the [Contribution Guide](CONTRIBUTING.md).
 
-# I need the IDA DB
+# How can I start decompiling?
 
-You can download the IDA DB we use [here](https://gofile.io/d/xHGj0R) it will be updated as we progress through each title update currently we only allow changes in between TU 20-30.
+You can get your hands on the IDA Database used by our team [here](tools/disassembly), for any major changes to it (like implementing types, which should not be necessary) there will be updates as we progress, if you want to contribute project files for other tools (Ghidra, Binja), please contact us.
 
 # How do I know what is done and what isnt?
 
-We use the Minecraft [fandom](https://minecraft.fandom.com/wiki/Xbox_360_Edition_TU20) to track title updates and we make sure commit messages have the TU labelled with the changes (ignore the stuff after `-` e.g TU20-3 that is a ID for our jira which you wont need to do or worry about)
+We use the [Minecraft Wiki](https://minecraft.wiki/w/Legacy_Console_Edition_version_history) to track title updates (for now, we focus on Xbox 360 updates, as they're the easiest to take care of), every commit related to decompilation progress contains a *Feature ID*, this is a way to keep track of changes throughout Title Updates from our spreadsheet.
 
 You are able to do any changes between the title updates listed above.
-
-# Guidelines
-
-- No AI
-- No guessing implementations must be reversed using WiiU symbols
-- Must follow the current commit style to keep everything clean and consistent
-- Don't do PRs if it is for QOL stuff or anything custom LCE Renewed is strictly for newer title updates
