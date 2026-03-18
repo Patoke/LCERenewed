@@ -5,10 +5,6 @@
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="ReleaseForArt|x64">
-      <Configuration>ReleaseForArt</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|x64">
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
@@ -17,11 +13,6 @@
   <PropertyGroup Label="Globals">
     <DefaultLanguage>en-US</DefaultLanguage>
     <ProjectGuid>{1B9A8C38-DD48-448C-AA24-E1A35E0089A3}</ProjectGuid>
-    <SccProjectName>SAK</SccProjectName>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccProvider>SAK</SccProvider>
-    <Keyword>Xbox360Proj</Keyword>
     <ApplicationEnvironment>title</ApplicationEnvironment>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -35,18 +26,6 @@
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v110</PlatformToolset>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v110</PlatformToolset>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>MultiByte</CharacterSet>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v110</PlatformToolset>
-  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -54,12 +33,6 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
@@ -72,22 +45,6 @@
     <LinkIncremental>true</LinkIncremental>
     <ImageXexOutput>$(OutDir)$(ProjectName)_D.xex</ImageXexOutput>
     <IncludePath>$(ProjectDir)\..\Minecraft.World\x64headers;$(ProjectDir)\Xbox\Sentient\Include;$(IncludePath)</IncludePath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">
-    <LinkIncremental>false</LinkIncremental>
-    <OutputFile>$(OutDir)default$(TargetExt)</OutputFile>
-    <ImageXexOutput>$(OutDir)default.xex</ImageXexOutput>
-    <IncludePath>$(ProjectDir)\Xbox\Sentient\Include;$(IncludePath)</IncludePath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">
-    <LinkIncremental>false</LinkIncremental>
-    <OutputFile>$(OutDir)default$(TargetExt)</OutputFile>
-    <ImageXexOutput>$(OutDir)default.xex</ImageXexOutput>
-    <IncludePath>$(ProjectDir)\..\Minecraft.World\x64headers;$(ProjectDir)\Xbox\Sentient\Include;$(Console_SdkIncludeRoot)</IncludePath>
-    <ExecutablePath>$(Console_SdkRoot)bin;$(VCInstallDir)bin\x86_amd64;$(VCInstallDir)bin;$(WindowsSDK_ExecutablePath_x86);$(VSInstallDir)Common7\Tools\bin;$(VSInstallDir)Common7\tools;$(VSInstallDir)Common7\ide;$(ProgramFiles)\HTML Help Workshop;$(MSBuildToolsPath32);$(FxCopDir);$(PATH);</ExecutablePath>
-    <ReferencePath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</ReferencePath>
-    <LibraryPath>$(Console_SdkLibPath)</LibraryPath>
-    <LibraryWPath>$(Console_SdkLibPath);$(Console_SdkWindowsMetadataPath)</LibraryWPath>
   </PropertyGroup>
   <PropertyGroup>
     <RemoveExtraDeployFiles>false</RemoveExtraDeployFiles>
@@ -118,20 +75,6 @@
       <ShowProgress>NotSet</ShowProgress>
       <SuppressStartupBanner>false</SuppressStartupBanner>
     </Link>
-    <ImageXex>
-      <ConfigurationFile>$(ProjectDir)xbox\xex-dev.xml</ConfigurationFile>
-    </ImageXex>
-    <ImageXex>
-      <TitleID>1480659447</TitleID>
-    </ImageXex>
-    <ImageXex>
-      <AdditionalSections>584111F7=$(ProjectDir)xbox\GameConfig\Minecraft.spa,RO;media=$(ProjectDir)xbox\XZP\Minecraft.xzp,RO</AdditionalSections>
-      <Pal50Incompatible>true</Pal50Incompatible>
-    </ImageXex>
-    <Deploy>
-      <DeploymentType>CopyToHardDrive</DeploymentType>
-      <DeploymentFiles>$(RemoteRoot)=$(ImagePath);$(RemoteRoot)\res=Xbox\res;$(RemoteRoot)=Xbox\AvatarAwards;$(RemoteRoot)\Tutorial=Xbox\Tutorial\Tutorial;$(RemoteRoot)=Xbox\584111F70AAAAAAA;$(RemoteRoot)=Xbox\kinect\speech;$(RemoteRoot)=Xbox\XZP\TMSFiles.xzp</DeploymentFiles>
-    </Deploy>
     <PostBuildEvent>
       <Command>set XCOPYFLAGS=/E /I /Y /D
 
@@ -182,20 +125,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
       <ShowProgress>NotSet</ShowProgress>
       <SuppressStartupBanner>false</SuppressStartupBanner>
     </Link>
-    <ImageXex>
-      <ConfigurationFile>$(ProjectDir)xbox\xex-dev.xml</ConfigurationFile>
-    </ImageXex>
-    <ImageXex>
-      <TitleID>1480659447</TitleID>
-    </ImageXex>
-    <ImageXex>
-      <AdditionalSections>584111F7=$(ProjectDir)xbox\GameConfig\Minecraft.spa,RO;media=$(ProjectDir)xbox\XZP\Minecraft.xzp,RO</AdditionalSections>
-      <Pal50Incompatible>true</Pal50Incompatible>
-    </ImageXex>
-    <Deploy>
-      <DeploymentType>CopyToHardDrive</DeploymentType>
-      <DeploymentFiles>$(RemoteRoot)=$(ImagePath);$(RemoteRoot)\res=Xbox\res;$(RemoteRoot)=Xbox\AvatarAwards;$(RemoteRoot)\Tutorial=Xbox\Tutorial\Tutorial;$(RemoteRoot)=Xbox\584111F70AAAAAAA;$(RemoteRoot)=Xbox\kinect\speech;$(RemoteRoot)=Xbox\XZP\TMSFiles.xzp</DeploymentFiles>
-    </Deploy>
     <PostBuildEvent>
       <Command>set XCOPYFLAGS=/E /I /Y /D
 
@@ -218,129 +147,15 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>Copy Assets</Message>
-    </PostBuildEvent>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <Optimization>Full</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <StringPooling>true</StringPooling>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PreprocessorDefinitions>_TU_BUILD;_FINAL_BUILD;_ITERATOR_DEBUG_LEVEL=0;NDEBUG;_XBOX;_CONTENT_PACKAGE;%(PreprocessorDefinitions);</PreprocessorDefinitions>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <CallAttributedProfiling>Disabled</CallAttributedProfiling>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-      <AdditionalIncludeDirectories>Windows64\Iggy\include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>false</OptimizeReferences>
-      <ProgramDatabaseFile>$(OutDir)default.pdb</ProgramDatabaseFile>
-      <SetChecksum>true</SetChecksum>
-      <AdditionalDependencies>xavatar2.lib;xapilib.lib;d3d9.lib;d3dx9.lib;xgraphics.lib;xboxkrnl.lib;xbox\Sentient\libs\SenCore.lib;xnet.lib;xaudio2.lib;xact3.lib;x3daudio.lib;xmcore.lib;vcomp.lib;xuirun.lib;xuirender.lib;xuihtml.lib;xonline.lib;xhv2.lib;qnetxaudio2.lib;xbox\4JLibs\libs\4J_Input.lib;xbox\4JLibs\libs\4J_Storage.lib;xbox\4JLibs\libs\4J_Profile.lib;xbox\4JLibs\libs\4J_Render.lib;..\Minecraft.World\ContentPackage\Minecraft.World.lib;xsocialpost.lib;xrnm.lib;xparty.lib;xbox\Sentient\libs\SenNews.lib;xbox\Sentient\libs\SenUGC.lib;xbox\Sentient\libs\SenBoxArt.lib;NuiApi.lib;ST.lib;NuiFitnessApi.lib;NuiHandles.lib;NuiSpeech.lib;NuiAudio.lib;xhttp.lib;xauth.lib;xgetserviceendpoint.lib;xav.lib;xjson.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <IgnoreSpecificDefaultLibraries>xapilib.lib</IgnoreSpecificDefaultLibraries>
-      <GenerateMapFile>false</GenerateMapFile>
-      <MapExports>false</MapExports>
-    </Link>
-    <ImageXex>
-      <ConfigurationFile>$(ProjectDir)xbox\xex.xml</ConfigurationFile>
-      <TitleID>1480659447</TitleID>
-      <AdditionalSections>584111F7=$(ProjectDir)xbox\GameConfig\Minecraft.spa,RO;media=$(ProjectDir)xbox\XZP\Minecraft.xzp,RO</AdditionalSections>
-    </ImageXex>
-    <Deploy>
-      <DeploymentType>CopyToHardDrive</DeploymentType>
-      <DeploymentFiles>$(RemoteRoot)=$(ImagePath);$(RemoteRoot)\res=Xbox\res;$(RemoteRoot)=Xbox\AvatarAwards;$(RemoteRoot)\Tutorial=Xbox\Tutorial\Tutorial;$(RemoteRoot)=Xbox\584111F70AAAAAAA;$(RemoteRoot)=Xbox\kinect\speech</DeploymentFiles>
-    </Deploy>
-    <PostBuildEvent>
-      <Command>set XCOPYFLAGS=/E /I /Y /D
-
-xcopy "$(ProjectDir)Common\Media\*" "$(TargetDir)Common\Media\" %XCOPYFLAGS%
-xcopy "$(ProjectDir)Common\res\*" "$(TargetDir)Common\res\" %XCOPYFLAGS%
-xcopy "$(ProjectDir)Common\Trial\TrialLevel.mcs" "$(TargetDir)Common\Trial\TrialLevel.mcs" %XCOPYFLAGS%
-xcopy "$(ProjectDir)Common\Tutorial\Tutorial" "$(TargetDir)Common\Tutorial\Tutorial" %XCOPYFLAGS%
-
-xcopy "$(ProjectDir)music\*" "$(TargetDir)music\" %XCOPYFLAGS%
-
-xcopy "$(ProjectDir)Windows64\GameHDD\*" "$(TargetDir)Windows64\GameHDD\" %XCOPYFLAGS%
-
-xcopy "$(ProjectDir)Windows64Media\DLC\*" "$(TargetDir)Windows64Media\DLC\" %XCOPYFLAGS%
-xcopy "$(ProjectDir)Windows64Media\loc\*" "$(TargetDir)Windows64Media\loc\" %XCOPYFLAGS%
-xcopy "$(ProjectDir)Windows64Media\Media\*" "$(TargetDir)Windows64Media\Media\" %XCOPYFLAGS%
-xcopy "$(ProjectDir)Windows64Media\Sound\*" "$(TargetDir)Windows64Media\Sound\" %XCOPYFLAGS%
-xcopy "$(ProjectDir)Windows64Media\Tutorial\*" "$(TargetDir)Windows64Media\Tutorial\" %XCOPYFLAGS%
-
-xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XCOPYFLAGS%</Command>
-    </PostBuildEvent>
-    <PostBuildEvent>
-      <Message>Copy Assets</Message>
-    </PostBuildEvent>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <Optimization>Full</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <StringPooling>true</StringPooling>
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <ExceptionHandling>Sync</ExceptionHandling>
-      <BufferSecurityCheck>false</BufferSecurityCheck>
-      <PrecompiledHeaderOutputFile>$(OutDir)$(ProjectName).pch</PrecompiledHeaderOutputFile>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PreprocessorDefinitions>_TU_BUILD;_FINAL_BUILD;_ITERATOR_DEBUG_LEVEL=0;NDEBUG;_XBOX;_CONTENT_PACKAGE;%(PreprocessorDefinitions);</PreprocessorDefinitions>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <RuntimeTypeInfo>true</RuntimeTypeInfo>
-      <CallAttributedProfiling>Disabled</CallAttributedProfiling>
-      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
-    </ClCompile>
-    <Link>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>false</OptimizeReferences>
-      <ProgramDatabaseFile>$(OutDir)default.pdb</ProgramDatabaseFile>
-      <SetChecksum>true</SetChecksum>
-      <AdditionalDependencies>xavatar2.lib;xapilib.lib;d3d9.lib;d3dx9.lib;xgraphics.lib;xboxkrnl.lib;xbox\Sentient\libs\SenCore.lib;xnet.lib;xaudio2.lib;xact3.lib;x3daudio.lib;xmcore.lib;vcomp.lib;xuirun.lib;xuirender.lib;xuihtml.lib;xonline.lib;xhv2.lib;qnetxaudio2.lib;xbox\4JLibs\libs\4J_Input.lib;xbox\4JLibs\libs\4J_Storage.lib;xbox\4JLibs\libs\4J_Profile.lib;xbox\4JLibs\libs\4J_Render.lib;..\Minecraft.World\ContentPackage\Minecraft.World.lib;xsocialpost.lib;xrnm.lib;xparty.lib;xbox\Sentient\libs\SenNews.lib;xbox\Sentient\libs\SenUGC.lib;xbox\Sentient\libs\SenBoxArt.lib;NuiApi.lib;ST.lib;NuiFitnessApi.lib;NuiHandles.lib;NuiSpeech.lib;NuiAudio.lib;xhttp.lib;xauth.lib;xgetserviceendpoint.lib;xav.lib;xjson.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <IgnoreSpecificDefaultLibraries>xapilib.lib</IgnoreSpecificDefaultLibraries>
-      <GenerateMapFile>false</GenerateMapFile>
-      <MapExports>false</MapExports>
-    </Link>
-    <ImageXex>
-      <ConfigurationFile>$(ProjectDir)xbox\xex.xml</ConfigurationFile>
-      <TitleID>1480659447</TitleID>
-      <AdditionalSections>584111F7=$(ProjectDir)xbox\GameConfig\Minecraft.spa,RO;media=$(ProjectDir)xbox\XZP\Minecraft.xzp,RO</AdditionalSections>
-    </ImageXex>
-    <Deploy>
-      <DeploymentType>CopyToHardDrive</DeploymentType>
-      <DeploymentFiles>$(RemoteRoot)=$(ImagePath);$(RemoteRoot)\res=Xbox\res;$(RemoteRoot)=Xbox\AvatarAwards;$(RemoteRoot)\Tutorial=Xbox\Tutorial\Tutorial;$(RemoteRoot)=Xbox\584111F70AAAAAAA;$(RemoteRoot)=Xbox\kinect\speech</DeploymentFiles>
-    </Deploy>
-    <PostBuildEvent>
-      <Command>xcopy /q /y /i /s /e $(ProjectDir)Common\res $(LayoutDir)Image\Loose\Common\res</Command>
-    </PostBuildEvent>
-    <PostBuildEvent>
-      <Message>Copying files for deployment</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="Network Implementation Notes.txt" />
     <None Include="Windows64\GameConfig\Minecraft.gameconfig">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </None>
     <None Include="Windows64\GameConfig\Minecraft.spa">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </None>
@@ -352,14 +167,12 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <None Include="Windows64\Iggy\lib\redist64\iggy_w64.dll">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</DeploymentContent>
     </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AbstractContainerScreen.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="AbstractTexturePack.h" />
     <ClInclude Include="AchievementPopup.h" />
@@ -445,14 +258,12 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClInclude Include="Common\GameRules\XboxStructureActionPlaceContainer.h" />
     <ClInclude Include="Common\GameRules\XboxStructureActionPlaceSpawner.h" />
     <ClInclude Include="Common\Leaderboards\base64.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Common\Leaderboards\LeaderboardInterface.h" />
     <ClInclude Include="Common\Leaderboards\LeaderboardManager.h" />
     <ClInclude Include="Common\Leaderboards\SonyLeaderboardManager.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
@@ -478,7 +289,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Common\Network\Sony\SonyRemoteStorage.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
@@ -578,7 +388,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClInclude Include="Common\UI\UIControl_SpaceIndicatorBar.h" />
     <ClInclude Include="Common\UI\UIControl_TexturePackList.h" />
     <ClInclude Include="Common\UI\UIControl_Touch.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
@@ -597,7 +406,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClInclude Include="Common\UI\UIScene_InGameInfoMenu.h" />
     <ClInclude Include="Common\UI\UIScene_InGamePlayerOptionsMenu.h" />
     <ClInclude Include="Common\UI\UIScene_InGameSaveManagementMenu.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClInclude>
@@ -616,7 +424,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClInclude Include="Common\UI\UIController.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Common\UI\UIControl_Button.h" />
     <ClInclude Include="Common\UI\UIControl_CheckBox.h" />
@@ -698,7 +505,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClInclude Include="ContainerScreen.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ControlsScreen.h" />
     <ClInclude Include="CowModel.h" />
@@ -706,7 +512,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClInclude Include="CraftingScreen.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="CreateWorldScreen.h" />
     <ClInclude Include="CreeperModel.h" />
@@ -765,7 +570,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClInclude Include="FurnaceScreen.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="GameRenderer.h" />
     <ClInclude Include="GhastModel.h" />
@@ -789,7 +593,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClInclude Include="InventoryScreen.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="ItemFrameRenderer.h" />
     <ClInclude Include="ItemInHandRenderer.h" />
@@ -832,8 +635,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     </ClInclude>
     <ClInclude Include="MushroomCowRenderer.h" />
     <ClInclude Include="Orbis\GameConfig\Minecraft.spa.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClInclude>
@@ -959,7 +760,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClInclude Include="TextEditScreen.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TextureAtlas.h" />
@@ -981,7 +781,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClInclude Include="TrapScreen.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="User.h" />
     <ClInclude Include="Vertex.h" />
@@ -994,125 +793,77 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClInclude Include="VillagerZombieModel.h" />
     <ClInclude Include="WaterDropParticle.h" />
     <ClInclude Include="Windows64\4JLibs\inc\4J_Input.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Windows64\4JLibs\inc\4J_Profile.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Windows64\4JLibs\inc\4J_Render.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Windows64\4JLibs\inc\4J_Storage.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Windows64\GameConfig\Minecraft.spa.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="Windows64\Iggy\gdraw\gdraw_d3d11.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="Windows64\Iggy\include\gdraw.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="Windows64\Iggy\include\iggy.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="Windows64\Iggy\include\iggyexpruntime.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="Windows64\Iggy\include\iggyperfmon.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="Windows64\Iggy\include\rrCore.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="Windows64\Iggy\gdraw\gdraw_d3d11.h" />
+    <ClInclude Include="Windows64\Iggy\include\gdraw.h" />
+    <ClInclude Include="Windows64\Iggy\include\iggy.h" />
+    <ClInclude Include="Windows64\Iggy\include\iggyexpruntime.h" />
+    <ClInclude Include="Windows64\Iggy\include\iggyperfmon.h" />
+    <ClInclude Include="Windows64\Iggy\include\rrCore.h" />
     <ClInclude Include="Windows64\Leaderboards\WindowsLeaderboardManager.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Windows64\Minecraft_Macros.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Windows64\Resource.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Windows64\Sentient\DynamicConfigurations.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Windows64\Sentient\MinecraftTelemetry.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Windows64\Sentient\SentientManager.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Windows64\Sentient\SentientStats.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Windows64\Sentient\SentientTelemetryCommon.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Windows64\Sentient\TelemetryEnum.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Windows64\Social\SocialManager.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
     <ClInclude Include="Windows64\Windows64_App.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
-    <ClInclude Include="Windows64\Windows64_UIController.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="Windows64\Windows64_UIController.h" />
     <ClInclude Include="Windows64\XML\ATGXmlParser.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClInclude>
@@ -1126,12 +877,8 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClInclude Include="WstringLookup.h" />
     <ClInclude Include="Xbox\Network\extra.h" />
     <ClInclude Include="Xbox\Network\NetworkPlayerXbox.h" />
-    <ClInclude Include="Xbox\Resource.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </ClInclude>
-    <ClInclude Include="Xbox\targetver.h">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </ClInclude>
+    <ClInclude Include="Xbox\Resource.h" />
+    <ClInclude Include="Xbox\targetver.h" />
     <ClInclude Include="ZombieModel.h" />
     <ClInclude Include="ZombieRenderer.h" />
   </ItemGroup>
@@ -1139,7 +886,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="AbstractContainerScreen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="AbstractTexturePack.cpp" />
     <ClCompile Include="AchievementPopup.cpp" />
@@ -1178,7 +924,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="Common\Audio\miniaudio\miniaudio.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\Audio\SoundEngine.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
@@ -1223,14 +968,12 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="Common\GameRules\XboxStructureActionPlaceContainer.cpp" />
     <ClCompile Include="Common\GameRules\XboxStructureActionPlaceSpawner.cpp" />
     <ClCompile Include="Common\Leaderboards\base64.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Common\Leaderboards\LeaderboardInterface.cpp" />
     <ClCompile Include="Common\Leaderboards\LeaderboardManager.cpp" />
     <ClCompile Include="Common\Leaderboards\SonyLeaderboardManager.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -1249,12 +992,10 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Common\Network\Sony\SonyRemoteStorage.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Common\Network\Sony\SQRNetworkManager.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -1341,7 +1082,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="Common\UI\UIControl_SpaceIndicatorBar.cpp" />
     <ClCompile Include="Common\UI\UIControl_TexturePackList.cpp" />
     <ClCompile Include="Common\UI\UIControl_Touch.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -1360,7 +1100,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="Common\UI\UIScene_InGameInfoMenu.cpp" />
     <ClCompile Include="Common\UI\UIScene_InGamePlayerOptionsMenu.cpp" />
     <ClCompile Include="Common\UI\UIScene_InGameSaveManagementMenu.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -1378,7 +1117,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="Common\UI\UIController.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Common\UI\UIControl_Button.cpp" />
     <ClCompile Include="Common\UI\UIControl_CheckBox.cpp" />
@@ -1437,77 +1175,62 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="Common\UI\UIString.cpp" />
     <ClCompile Include="Common\UI\UITTFFont.cpp" />
     <ClCompile Include="Common\zlib\adler32.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\zlib\compress.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\zlib\crc32.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\zlib\deflate.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\zlib\gzclose.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\zlib\gzlib.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\zlib\gzread.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\zlib\gzwrite.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\zlib\infback.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\zlib\inffast.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\zlib\inflate.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\zlib\inftrees.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\zlib\trees.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\zlib\uncompr.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Common\zlib\zutil.c">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
@@ -1521,7 +1244,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="ContainerScreen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ControlsScreen.cpp" />
     <ClCompile Include="CowModel.cpp" />
@@ -1529,7 +1251,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="CraftingScreen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="CreateWorldScreen.cpp" />
     <ClCompile Include="CreeperModel.cpp" />
@@ -1541,7 +1262,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="DefaultRenderer.cpp" />
     <ClCompile Include="DefaultTexturePack.cpp" />
     <ClCompile Include="DemoLevel.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -1591,7 +1311,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="FurnaceScreen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="GameRenderer.cpp" />
     <ClCompile Include="GhastModel.cpp" />
@@ -1615,7 +1334,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="InventoryScreen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ItemFrameRenderer.cpp" />
     <ClCompile Include="ItemInHandRenderer.cpp" />
@@ -1758,8 +1476,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">Create</PrecompiledHeader>
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ShowIncludes>
       <ShowIncludes Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ShowIncludes>
     </ClCompile>
@@ -1778,7 +1494,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="TextEditScreen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureAtlas.cpp" />
@@ -1800,7 +1515,6 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="TrapScreen.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="User.cpp" />
     <ClCompile Include="Vertex.cpp" />
@@ -1812,29 +1526,20 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
     <ClCompile Include="VillagerRenderer.cpp" />
     <ClCompile Include="VillagerZombieModel.cpp" />
     <ClCompile Include="WaterDropParticle.cpp" />
-    <ClCompile Include="Windows64\Iggy\gdraw\gdraw_d3d11.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="Windows64\Iggy\gdraw\gdraw_d3d11.cpp" />
     <ClCompile Include="Windows64\Leaderboards\WindowsLeaderboardManager.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Windows64\Windows64_App.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="Windows64\Windows64_Minecraft.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Windows64\Windows64_UIController.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="Windows64\Windows64_UIController.cpp" />
     <ClCompile Include="WitchModel.cpp" />
     <ClCompile Include="WitchRenderer.cpp" />
     <ClCompile Include="WitherBossModel.cpp" />
@@ -1849,71 +1554,39 @@ xcopy "$(ProjectDir)Windows64\Iggy\lib\redist64\iggy_w64.dll" "$(TargetDir)" %XC
   </ItemGroup>
   <ItemGroup>
     <Library Include="Windows64\4JLibs\libs\4J_Input.lib">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </Library>
     <Library Include="Windows64\4JLibs\libs\4J_Input_d.lib">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </Library>
     <Library Include="Windows64\4JLibs\libs\4J_Render_PC.lib">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </Library>
     <Library Include="Windows64\4JLibs\libs\4J_Render_PC_d.lib">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </Library>
     <Library Include="Windows64\4JLibs\libs\4J_Storage.lib">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </Library>
     <Library Include="Windows64\4JLibs\libs\4J_Storage_d.lib">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='ReleaseForArt|x64'">true</ExcludedFromBuild>
     </Library>
-    <Library Include="Windows64\Iggy\lib\iggyexpruntime_w64.lib">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </Library>
-    <Library Include="Windows64\Iggy\lib\iggyperfmon_w64.lib">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </Library>
-    <Library Include="Windows64\Iggy\lib\iggy_w64.lib">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </Library>
+    <Library Include="Windows64\Iggy\lib\iggyexpruntime_w64.lib" />
+    <Library Include="Windows64\Iggy\lib\iggyperfmon_w64.lib" />
+    <Library Include="Windows64\Iggy\lib\iggy_w64.lib" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Xbox\MinecraftWindows.ico">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </Image>
-    <Image Include="Xbox\small.ico">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </Image>
+    <Image Include="Xbox\MinecraftWindows.ico" />
+    <Image Include="Xbox\small.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="Xbox\MinecraftWindows.rc">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='DebugContentPackage|Durango'">true</ExcludedFromBuild>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <SDKReference Include="Xbox GameChat API, Version=8.0" />
-    <SDKReference Include="Xbox Services API, Version=8.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="windows.xbox.networking.realtimesession">
-      <HintPath>Durango\Network\windows.xbox.networking.realtimesession.winmd</HintPath>
-      <IsWinMDFile>true</IsWinMDFile>
-    </Reference>
+    <ResourceCompile Include="Xbox\MinecraftWindows.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
