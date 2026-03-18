@@ -15,3 +15,7 @@ You can get your hands on the IDA Database used by our team [here](tools/disasse
 We use the [Minecraft Wiki](https://minecraft.wiki/w/Legacy_Console_Edition_version_history) to track title updates (for now, we focus on Xbox 360 updates, as they're the easiest to take care of), every commit related to decompilation progress contains a *Feature ID*, this is a way to keep track of changes throughout Title Updates from our spreadsheet.
 
 You are able to do any changes between the title updates listed above.
+
+# What has to be implemented?
+
+You can check our spreadsheet [here](https://drive.proton.me/urls/C3JXV9J80C#EcTsOG9eQncG). For any missing changes, please create a new issue with the change description and the target Title Update number.
