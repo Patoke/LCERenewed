@@ -7,7 +7,7 @@ RegionFileCache RegionFileCache::s_defaultCache;
 
 bool RegionFileCache::useSplitSaves(ESavePlatform platform)
 {
-	switch(platform)
+	switch (platform)
 	{
 	case SAVE_FILE_PLATFORM_XBONE:
 	case SAVE_FILE_PLATFORM_PS4:
