@@ -315,7 +315,7 @@ bool TileRenderer::tesselateInWorld( Tile* tt, int x, int y, int z, int forceDat
 
 			// now we need to set the shape
 			setShape(tt);
-
+			
 			retVal = tesselateBlockInWorld( tt, x, y, z, faceFlags );
 		}
 		break;

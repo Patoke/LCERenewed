@@ -810,7 +810,7 @@ int LevelRenderer::renderChunks(int from, int to, int layer, double alpha)
 		if( ( globalChunkFlags[pClipChunk->globalIdx] & emptyFlag ) == emptyFlag ) continue;	// Check that this particular layer isn't empty
 
 		// List can be calculated directly from the chunk's global idex
-		int list = pClipChunk->globalIdx * 2 + layer;
+		int list = pClipChunk->globalIdx * 3 + layer;
 		list += chunkLists;
 
 		if(RenderManager.CBuffCall(list, first))

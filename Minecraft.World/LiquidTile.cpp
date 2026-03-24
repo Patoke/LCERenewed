@@ -253,7 +253,7 @@ float LiquidTile::getBrightness(LevelSource *level, int x, int y, int z)
 
 int LiquidTile::getRenderLayer()
 {
-	return material == Material::water ? 1 : 0;
+	return material == Material::water ? 2 : 0;
 }
 
 void LiquidTile::animateTick(Level *level, int x, int y, int z, Random *random)

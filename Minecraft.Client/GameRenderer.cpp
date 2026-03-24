@@ -1383,24 +1383,22 @@ void GameRenderer::renderLevel(float a, __int64 until)
 				GL11::glShadeModel(GL11::GL_SMOOTH);
 			}
 
-			glBlendFunc(GL_ZERO, GL_ONE);
 			PIXBeginNamedEvent(0,"Fancy second pass - writing z");
-			int visibleWaterChunks = levelRenderer->render(cameraEntity, 1, a, updateChunks);
+			glBlendFunc(GL_ZERO, GL_ONE);
+			glEnable(GL_CULL_FACE);
+
+			levelRenderer->render(cameraEntity, 2, a, updateChunks);
 			PIXEndNamedEvent();
+
+			PIXBeginNamedEvent(0, "Fancy second pass - actual render");
 			glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+			levelRenderer->render(cameraEntity, 2, a, updateChunks);	// 4J - chanaged, used to be renderSameAsLast but we don't support that anymore
+			PIXEndNamedEvent();
 
-			if (visibleWaterChunks > 0)
-			{
-				PIXBeginNamedEvent(0,"Fancy second pass - actual rendering");
-				levelRenderer->render(cameraEntity, 1, a, updateChunks);	// 4J - chanaged, used to be renderSameAsLast but we don't support that anymore
-				PIXEndNamedEvent();
-			}
+			// @Patoke todo: implement, this is really important for rendering of order independent alpha objects
+			// RenderManager.BeginOrderIndependentAlpha();
 
-			GL11::glShadeModel(GL11::GL_FLAT);
-		}
-		else
-		{
-			PIXBeginNamedEvent(0,"Second pass level render");
+			PIXBeginNamedEvent(0, "Fancy second pass - actual rendering");
 			levelRenderer->render(cameraEntity, 1, a, updateChunks);
 			PIXEndNamedEvent();
 		}
@@ -1415,6 +1413,8 @@ void GameRenderer::renderLevel(float a, __int64 until)
 		particleEngine->render(cameraEntity, a, ParticleEngine::TRANSLUCENT_LIST);
 		PIXEndNamedEvent();
 		turnOffLightLayer(a);		// 4J - brought forward from 1.8.2
+		// @Patoke todo: implement
+		// RenderManager.EndOrderIndependentAlpha();
 		////////////////////////// End of 4J added section
 
 		glDepthMask(true);
